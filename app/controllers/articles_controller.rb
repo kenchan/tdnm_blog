@@ -2,6 +2,6 @@ class ArticlesController < ApplicationController
   layout 'application'
 
   def index
-    @articles = Article.all
+    @articles = Article.limit(10)
   end
 end
