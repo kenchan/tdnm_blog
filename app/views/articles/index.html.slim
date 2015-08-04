@@ -1,1 +1,5 @@
-| hello world
+- @articles.each do |a|
+  article
+    h1= a.title
+    h2= a.published_at
+    div== ::GitHub::Markup::Markdown.new.render(a.body)

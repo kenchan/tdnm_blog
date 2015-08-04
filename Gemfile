@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.3'
 
 gem 'coffee-rails', '~> 4.1.0'
+gem 'github-markdown'
+gem 'github-markup', require: 'github/markup'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'sass-rails', '~> 5.0'
