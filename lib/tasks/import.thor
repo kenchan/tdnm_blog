@@ -16,7 +16,7 @@ class TdnmCli < Thor
         Article.create!(
           title: e["title"],
           body: e["body"],
-          published_at: e["date"]
+          published_on: e["date"]
         )
       end
     end

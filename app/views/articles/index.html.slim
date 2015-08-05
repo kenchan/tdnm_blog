@@ -1,7 +1,7 @@
 - @articles.each do |a|
   article
     header
-      time= a.published_at.strftime('%Y-%m-%d (%a)')
+      time= a.published_on.strftime('%Y-%m-%d (%a)')
       h2= a.title
 
     .body== ::GitHub::Markup::Markdown.new.render(a.body)
