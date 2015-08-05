@@ -7,46 +7,27 @@ html
     meta name='viewport' content='width=device-width, initial-scale=1.0'
 
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
-    = stylesheet_link_tag '//storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css'
     = stylesheet_link_tag 'github'
-    = stylesheet_link_tag '//fonts.googleapis.com/icon?family=Material+Icons'
-    = stylesheet_link_tag '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'
 
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
-    = javascript_include_tag '//storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js'
 
     link rel='alternate' type='application/atom+xml' title='atom' href='/atom.xml'
 
-    script async=true src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
-    script type="text/javascript" src="//apis.google.com/js/plusone.js"
     title= weblog.title
 
   body
-    .mdl-layout
-      header.mdl-layout__header
-        .mdl-layout__header-row
-          a.mdl-button.mdl-js-button.mdl-button--icon href='/' rel='home'
-            i.material-icons home
-          span.mdl-layout-title= weblog.title
-          .mdl-layout-spacer
-          .mdl-textfield.mdl-js-textfield.mdl-textfield--expandable
-            label.mdl-button.mdl-js-button.mdl-button--icon for="search"
-              i.material-icons search
-            .mdl-textfield__expandable-holder
-              form action='https://www.google.co.jp/search'
-                input type='hidden' name='q' value='site:http://diary.shu-cream.net/'
-                input.mdl-textfield__input type="text" name='q' id="search"
-                label.mdl-textfield__label for="search" Enter your query...
-      .mdl-layout__content
-        .mdl-grid style='max-width:900px'
-          == yield
-      footer.mdl-mini-footer
-        .mdl-mini-footer--left-section
-          .mdl-logo diary.shu-cream.net
-          ul.mdl-mini-footer--link-list
-            li
-              a href="https://github.com/kenchan" github
-            li
-              a href="https://twitter.com/kenchan" twitter
-            li
-              a href="https://facebook.com/kenichi.taka" facebook
+    .container
+      header.row
+        h1= link_to weblog.title, root_path
+    .container
+      .row
+        == yield
+    .container
+      footer.row
+        ul
+          li
+            a href="https://github.com/kenchan" github
+          li
+            a href="https://twitter.com/kenchan" twitter
+          li
+            a href="https://facebook.com/kenichi.taka" facebook

@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/helios-technologies/skeleton-rails.git
+  revision: 7a0a32113ad87f439c349f629f9c5a52cdede10f
+  specs:
+    skeleton-rails (1.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -162,6 +168,7 @@ DEPENDENCIES
   rails (= 4.2.3)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  skeleton-rails!
   slim-rails
   spring
   sqlite3

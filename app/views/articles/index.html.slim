@@ -1,9 +1,7 @@
 - @articles.each do |a|
-  article.mdl-card.mdl-cell.mdl-cell--12-col.mdl-shadow--8dp
-    .mdl-card__title
-      .mdl-card__title-text= a.title
-      .mdl-color-text--grey-500 style='margin-left: auto;'= a.published_at.strftime('%Y-%m-%d (%a)')
+  article
+    header
+      time= a.published_at.strftime('%Y-%m-%d (%a)')
+      h2= a.title
 
-    .mdl-card__supporting-text== ::GitHub::Markup::Markdown.new.render(a.body)
-    .mdl-card__actions.mdl-card--border
-      ==link_to '続きを読む', '/', class: 'mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect'
+    .body== ::GitHub::Markup::Markdown.new.render(a.body)

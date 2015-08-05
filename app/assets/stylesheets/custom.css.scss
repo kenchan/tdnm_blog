@@ -1,0 +1,35 @@
+$base_font_color: #333;
+
+* {
+  color: $base_font_color;
+  font-family: Arial, Roboto, "Droid Sans", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+}
+
+html {
+  font-size: 100%;
+}
+
+header {
+  margin-top: 3rem;
+  h1 {
+    text-align: center;
+    a {
+      text-decoration: none;
+      color: $base_font_color;
+    }
+  }
+}
+
+article {
+  border-top: 1px solid #eee;
+
+  header {
+    time {
+      color: #777;
+    }
+  }
+
+  .body {
+    margin-top: 4rem;
+  }
+}

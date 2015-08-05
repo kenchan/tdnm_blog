@@ -9,6 +9,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'sass-rails', '~> 5.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'skeleton-rails', github: 'helios-technologies/skeleton-rails'
 gem 'slim-rails'
 gem 'sqlite3'
 gem 'turbolinks'
