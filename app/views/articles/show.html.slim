@@ -1,0 +1,7 @@
+article
+  header
+    time= @article.published_on.strftime('%Y-%m-%d (%a)')
+    h2= @article.title
+
+  .body== ::GitHub::Markup::Markdown.new.render(@article.body)
+

@@ -8,6 +8,7 @@ class TdnmCli < Thor
     entries = Find.find("#{base_dir}/source").grep(/\d{4}-\d{2}-\d{2}-*/).map {|e|
       a = YAML.load_file(e)
       a["body"] = File.read(e).gsub(/---.+---\s+/m, '')
+      a["url_title"] = e.match(/\d{4}-\d{2}-\d{2}-([^-].+?)\./)[1]
       a
     }
 
@@ -15,6 +16,7 @@ class TdnmCli < Thor
       entries.each do |e|
         Article.create!(
           title: e["title"],
+          url_title: e["url_title"],
           body: e["body"],
           published_on: e["date"]
         )
