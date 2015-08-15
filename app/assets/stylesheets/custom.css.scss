@@ -20,6 +20,24 @@ header {
   }
 }
 
+footer {
+  border-top: 1px solid #eee;
+
+  ul {
+    padding-top: 2rem;
+    margin-bottom: 0;
+    list-style: none;
+    text-align: center;
+    li {
+      display: inline-block;
+      padding-right: 2rem;
+      .fa {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
 article {
   border-top: 1px solid #eee;
 
