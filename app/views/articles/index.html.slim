@@ -5,3 +5,5 @@
       h2= link_to a.title, "#{a.published_on.strftime('%Y/%m/%d')}/#{a.url_title}.html"
 
     .body== ::GitHub::Markup::Markdown.new.render(a.body)
+
+= paginate @articles
