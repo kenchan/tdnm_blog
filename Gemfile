@@ -18,6 +18,10 @@ gem 'sqlite3'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
+group :production do
+  gem 'rack-google-analytics'
+end
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'

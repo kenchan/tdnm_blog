@@ -90,6 +90,9 @@ GEM
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.6.4)
+    rack-google-analytics (1.2.0)
+      actionpack
+      activesupport
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.3)
@@ -175,6 +178,7 @@ DEPENDENCIES
   jquery-rails
   kaminari
   quiet_assets
+  rack-google-analytics
   rails (= 4.2.3)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
