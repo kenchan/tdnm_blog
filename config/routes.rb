@@ -9,5 +9,6 @@ Rails.application.routes.draw do
 
   namespace 'admin' do
     resource 'dashboard', only: %w(show)
+    resources 'articles', only: %w(new create)
   end
 end

@@ -1,0 +1,11 @@
+= form_for @article, url: admin_articles_path do |f|
+  dl
+    dt= f.label :title
+    dd= f.text_field :title
+    dt= f.label :url_title
+    dd= f.text_field :url_title
+    dt= f.label :body
+    dd= f.text_area :body
+    dt= f.label :published_on
+    dd= f.datetime_select :published_on
+  = f.submit
