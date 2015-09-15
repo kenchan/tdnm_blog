@@ -3,7 +3,7 @@ atom_feed(language: 'ja_JP') do |feed|
   feed.updated(@articles[0].created_at) if @articles.length > 0
 
   @articles.each do |a|
-    feed.entry(a) do |entry|
+    feed.entry(a, url: article_url(a)) do |entry|
       entry.title(a.title)
       entry.content(a.body, type: 'html')
 
