@@ -43,6 +43,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.2)
+    bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
@@ -84,6 +85,12 @@ GEM
     mime-types (2.6.1)
     mini_portile (0.6.2)
     minitest (5.7.0)
+    monban (0.2.1)
+      bcrypt
+      rails
+      warden
+    monban-generators (0.0.4)
+      monban (>= 0.0.12)
     multi_json (1.11.2)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
@@ -165,6 +172,8 @@ GEM
     uglifier (2.7.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    warden (1.2.3)
+      rack (>= 1.0)
     web-console (2.2.1)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -183,6 +192,8 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   kaminari
+  monban
+  monban-generators
   pg
   quiet_assets
   rack-google-analytics
