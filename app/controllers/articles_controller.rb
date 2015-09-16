@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
   layout 'application'
 
   def index
-    @articles = Article.order('id desc').page(params[:page])
+    @articles = Article.order(published_on: :desc).page(params[:page])
   end
 
   def show
