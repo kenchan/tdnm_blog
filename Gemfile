@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.2.3'
+
 gem 'rails', '4.2.3'
 
 gem 'coffee-rails', '~> 4.1.0'
@@ -11,6 +13,7 @@ gem 'jquery-rails'
 gem 'kaminari'
 gem 'monban'
 gem 'monban-generators'
+gem 'puma'
 gem 'quiet_assets'
 gem 'sass-rails', '~> 5.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
