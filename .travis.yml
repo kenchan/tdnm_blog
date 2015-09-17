@@ -8,3 +8,6 @@ deploy:
   app: shielded-thicket-5793
   on:
     repo: kenchan/tdnm
+notifications:
+  webhooks:
+    - https://idobata.io/hook/travis_ci/07a29fae-2f04-4390-9fdb-1f694dc328a3
