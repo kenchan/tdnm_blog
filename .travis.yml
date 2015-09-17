@@ -1,0 +1,10 @@
+language: ruby
+rvm:
+  - 2.2.3
+deploy:
+  provider: heroku
+  api_key:
+    secure: A6GCHiRCGd0TgRX2bKrfiiVQ2dmSSySeba8On5ysTOe9Fbemd/MTnkdWniksPMCZT2RjRF2wv14t5gHvI7iHvIGBRRrMqXCD0Trg9p7mMDSWySH9NEmVlUleIQSyqFZaoINV89FCdFSbdvILk3ujXre2e3eOE/js65aCK+nxdEKQJu78C+Gdh1oidQVTTXA+Xj1e7IRM1JDk0u+bRZ2k951lTKphG2aWntbcltVvAw+mrEEpxj4nbJaRyM6q782Az2S1YJQuJinHBbQYF5Q6BDGKy/QBI1lWZl6bVk5XHc4+GtIrDzJPJDf5Q3vVS98vl4uWHpnvrpapLxJRpvVsEnlLqa3UH6vgB77sswtHCIvl7S0mna8Y+1WerK2MOsEiR6NZATCEDMCRZXeBqe7+g+ZH6wv9zfucWMbXPUnsZax0cmuQOiktoHu1D7moI3DiIhKwk5miD+J3NGk0imyYP1DQ2OS+KYH4JUmGJu7d7BovEMAPNA9vrUWdjXlO3ivl+iqMBMw6ODcxij4sFJZQOHctE2UuNL34bt0awZgRTRIx19HhHf0w/ZHIL3me1+ZMmVrxTGvW7OLf0hcj1Z5aEESgfUxIZPns/xFHn2cSsc9i7USOGKidetmro7/09EM69mbip1NWcQSx7UiQ5fcOH5qcI65kedZOusUK4UaTpPU=
+  app: shielded-thicket-5793
+  on:
+    repo: kenchan/tdnm
