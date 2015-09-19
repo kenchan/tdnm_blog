@@ -5,7 +5,7 @@ atom_feed(language: 'ja_JP') do |feed|
   @articles.each do |a|
     feed.entry(a, url: article_url(a)) do |entry|
       entry.title(a.title)
-      entry.content(a.body, type: 'html')
+      entry.content(::GitHub::Markup::Markdown.new.render(a.body), type: 'html')
 
       entry.author do |author|
         author.name("Kenichi TAKAHASHI")
