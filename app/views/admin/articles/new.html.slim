@@ -1,11 +1,27 @@
 = form_for @article, url: admin_articles_path do |f|
-  dl
-    dt= f.label :title
-    dd= f.text_field :title
-    dt= f.label :url_title
-    dd= f.text_field :url_title
-    dt= f.label :body
-    dd= f.text_area :body
-    dt= f.label :published_on
-    dd= f.datetime_select :published_on
-  = f.submit
+  .row
+    .six.columns
+      = f.label :title
+      = f.text_field :title, class: 'u-full-width'
+    .six.columns
+      = f.label :url_title
+      = f.text_field :url_title, class: 'u-full-width'
+  .row
+    .six.columns
+      = f.label :body
+      = f.text_area :body, rows: 10, class: 'u-full-width', style: 'height: 100%;'
+    .six.columns
+      label Preview
+      #preview-area
+  .row
+    = f.label :published_on
+    = f.datetime_select :published_on
+  .row
+    = f.submit class: 'button-primary'
+
+javascript:
+  $(function() {
+    $('#article_body').on('keyup', function() {
+      $('#preview-area').html(marked($(this).val()));
+    });
+  });
