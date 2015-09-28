@@ -1,4 +1,5 @@
 class Admin::ArticlesController < ApplicationController
+  layout 'admin'
   before_action :require_login
 
   def new

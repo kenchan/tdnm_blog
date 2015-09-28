@@ -1,0 +1,26 @@
+doctype html
+
+html
+  head
+    meta charset="utf-8"
+    meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1'
+    meta name='viewport' content='width=device-width, initial-scale=1.0'
+
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag 'github'
+
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = javascript_include_tag 'admin', 'data-turbolinks-track' => true
+
+    script async=true src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+    script async=true src='https://b.st-hatena.com/js/bookmark_button.js'
+
+    title= title(@article)
+
+  body
+    .container
+      header.row
+        h1= link_to weblog.title, root_path
+    .container
+      .row
+        == yield
