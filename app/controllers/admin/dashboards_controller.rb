@@ -1,4 +1,5 @@
 class Admin::DashboardsController < ApplicationController
+  layout 'admin'
   before_action :require_login
 
   def show
