@@ -1,4 +1,4 @@
-= form_for @article, url: admin_articles_path do |f|
+= form_for [:admin, @article]  do |f|
   .row
     .six.columns
       = f.label :title
