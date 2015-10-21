@@ -22,6 +22,7 @@ gem 'skeleton-rails', github: 'helios-technologies/skeleton-rails'
 gem 'slim-rails'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
+gem 'rack-hatena_star'
 
 group :production do
   gem 'pg'

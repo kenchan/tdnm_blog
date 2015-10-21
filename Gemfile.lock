@@ -101,6 +101,8 @@ GEM
     rack-google-analytics (1.2.0)
       actionpack
       activesupport
+    rack-hatena_star (0.1.0)
+      rack
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.4)
@@ -199,6 +201,7 @@ DEPENDENCIES
   puma
   quiet_assets
   rack-google-analytics
+  rack-hatena_star
   rails
   rails_12factor
   sass-rails (~> 5.0)
