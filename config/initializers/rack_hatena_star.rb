@@ -3,9 +3,9 @@ Rails.application.config.middleware.use(
   token: '64ec46b14d3213944171cf6c8966b68e2a0a46dd',
   entry_nodes: {
     article: {
-      uri: 'h2 a',
+      uri: 'header h2 a',
       title: 'h2',
-      container: 'h2'
+      container: 'header h2'
     }
   }
 )

@@ -20,12 +20,12 @@ html
 
   body
     .container
-      header.row
+      header
         h1= link_to weblog.title, root_path
-    .container
-      .row
+
+      section
         == yield
-    .container
+
       footer
         ul
           li
