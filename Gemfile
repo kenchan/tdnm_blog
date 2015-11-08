@@ -14,15 +14,15 @@ gem 'kaminari'
 gem 'marked-rails'
 gem 'monban'
 gem 'monban-generators'
+gem 'neat'
 gem 'puma'
 gem 'quiet_assets'
+gem 'rack-hatena_star'
 gem 'sass-rails', '~> 5.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'skeleton-rails', github: 'helios-technologies/skeleton-rails'
 gem 'slim-rails'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
-gem 'rack-hatena_star'
 
 group :production do
   gem 'pg'
