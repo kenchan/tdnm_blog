@@ -1,9 +1,0 @@
-- @articles.each do |a|
-  article
-    header
-      time= a.published_on.strftime('%Y-%m-%d (%a)')
-      h2= link_to a.title, "#{a.published_on.strftime('%Y/%m/%d')}/#{a.url_title}.html"
-    .body
-      = link_to 'edit', edit_admin_article_path(a)
-
-= paginate @articles
