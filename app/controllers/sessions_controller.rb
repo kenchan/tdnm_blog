@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  include Monban::ControllerHelpers
+
   skip_before_action :require_login, only: [:new, :create]
 
   def new
@@ -8,7 +10,7 @@ class SessionsController < ApplicationController
     user = authenticate_session(session_params)
 
     if sign_in(user)
-      redirect_to admin_dashboard_path
+      redirect_to admin_root_path
     else
       render :new
     end
