@@ -4,7 +4,7 @@ ruby '2.3.0'
 
 gem 'rails'
 
-gem 'administrate'
+gem 'administrate', github: 'mariochavez/administrate', branch: 'remove-inline_svg'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'font-awesome-rails'
 gem 'github-markdown'
