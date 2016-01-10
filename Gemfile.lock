@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/mariochavez/administrate.git
-  revision: 294470f13e8fd59969b3fcb827bb5a65263befa8
+  revision: b7c78ed53c62f58a8327eed831a2050aa76a88e1
   branch: remove-inline_svg
   specs:
     administrate (0.1.2)
@@ -104,7 +104,7 @@ GEM
     mime-types (2.99)
     mini_portile2 (2.0.0)
     minitest (5.8.3)
-    momentjs-rails (2.10.6)
+    momentjs-rails (2.11.0)
       railties (>= 3.1)
     monban (0.2.1)
       bcrypt
@@ -182,7 +182,7 @@ GEM
       activesupport (>= 3.1, < 5.0)
       railties (>= 3.1, < 5.0)
       slim (~> 3.0)
-    spring (1.6.1)
+    spring (1.6.2)
     sprockets (3.5.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
