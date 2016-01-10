@@ -1,6 +1,16 @@
 language: ruby
+
+addons:
+  postgresql: '9.4'
+
+services:
+  - postgresql
+
 before_script:
-- bundle exec rake db:migrate RAILS_ENV=test
+  - psql -c 'create database tdnm_test;' -U postgres
+  - cp config/database.yml.travis config/database.yml
+  - bundle exec rake db:migrate RAILS_ENV=test
+
 deploy:
   provider: heroku
   api_key:
@@ -8,6 +18,7 @@ deploy:
   app: shielded-thicket-5793
   on:
     repo: kenchan/tdnm
+
 notifications:
   webhooks:
   - https://idobata.io/hook/travis_ci/07a29fae-2f04-4390-9fdb-1f694dc328a3

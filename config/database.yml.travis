@@ -1,0 +1,6 @@
+test:
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+  username: postgres
+  database: tdnm_test
