@@ -10,7 +10,7 @@ class ArticleDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     title: Field::String,
-    body: Field::String,
+    body: Field::Text,
     url_title: Field::String,
     published_on: Field::DateTime,
     created_at: Field::DateTime,
