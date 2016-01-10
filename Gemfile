@@ -24,9 +24,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'slim-rails'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
+gem 'pg'
 
 group :production do
-  gem 'pg'
   gem 'rack-google-analytics'
   gem 'rails_12factor'
 end
@@ -34,6 +34,5 @@ end
 group :development, :test do
   gem 'byebug'
   gem 'spring'
-  gem 'sqlite3'
   gem 'web-console', '~> 2.0'
 end
