@@ -1,7 +1,7 @@
 article
   header
     time= @article.published_on.strftime('%Y-%m-%d (%a)')
-    h2= link_to @article.title, "#{@article.published_on.strftime('%Y/%m/%d')}/#{@article.url_title}.html"
+    h2= link_to @article.title, article_url(@article)
 
   .body== ::GitHub::Markup::Markdown.new.render(@article.body)
 
