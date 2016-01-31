@@ -26,6 +26,10 @@ gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'pg'
 
+group :development do
+  gem 'web-console'
+end
+
 group :production do
   gem 'rack-google-analytics'
   gem 'rails_12factor'
@@ -34,5 +38,4 @@ end
 group :development, :test do
   gem 'byebug'
   gem 'spring'
-  gem 'web-console', '~> 2.0'
 end
