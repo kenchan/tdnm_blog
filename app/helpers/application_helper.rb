@@ -3,7 +3,11 @@ module ApplicationHelper
     @_weblog ||= Weblog.first
   end
 
-  def title(article = nil)
-    [article.try(:title), weblog.title].compact.join(' - ')
+  def default_meta_tags
+    {
+      site: weblog.title,
+      title: @article.try(:title),
+      reverse: true
+    }
   end
 end
