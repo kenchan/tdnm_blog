@@ -16,6 +16,7 @@ gem 'marked-rails'
 gem 'monban'
 gem 'monban-generators'
 gem 'neat'
+gem 'pg'
 gem 'puma'
 gem 'quiet_assets'
 gem 'rack-hatena_star'
@@ -24,7 +25,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'slim-rails'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
-gem 'pg'
 
 group :development do
   gem 'web-console'
