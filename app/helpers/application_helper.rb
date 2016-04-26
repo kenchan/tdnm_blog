@@ -6,6 +6,7 @@ module ApplicationHelper
   def default_meta_tags
     {
       site: weblog.title,
+      charset: 'utf-8',
       title: @article.try(:title),
       reverse: true
     }
