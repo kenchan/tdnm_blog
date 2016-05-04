@@ -3,7 +3,24 @@ module ApplicationHelper
     @_weblog ||= Weblog.first
   end
 
-  def title(article = nil)
-    [article.try(:title), weblog.title].compact.join(' - ')
+  def meta_description
+    @_meta_description ||= if @article
+      truncate(
+        strip_tags(::GitHub::Markup::Markdown.new.render(@article.body)),
+        length: MetaTags.config.description_limit
+      )
+    else
+      nil
+    end
+  end
+
+  def default_meta_tags
+    {
+      site: weblog.title,
+      charset: 'utf-8',
+      title: @article.try(:title),
+      reverse: true,
+      description: meta_description
+    }
   end
 end

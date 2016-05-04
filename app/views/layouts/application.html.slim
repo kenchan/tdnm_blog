@@ -2,7 +2,7 @@ doctype html
 
 html
   head
-    meta charset="utf-8"
+    = display_meta_tags default_meta_tags
     meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1'
     meta name='viewport' content='width=device-width, initial-scale=1.0'
 
@@ -15,9 +15,6 @@ html
 
     script async=true src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
     script async=true src='https://b.st-hatena.com/js/bookmark_button.js'
-
-    title= title(@article)
-
   body
     .container
       header
