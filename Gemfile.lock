@@ -75,7 +75,7 @@ GEM
     debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.6.0)
-    font-awesome-rails (4.6.1.0)
+    font-awesome-rails (4.6.2.0)
       railties (>= 3.2, < 5.1)
     github-markdown (0.6.9)
     github-markup (1.4.0)
