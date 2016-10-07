@@ -59,3 +59,21 @@ article {
 .pagination {
   text-align: center;
 }
+
+blockquote {
+  background-color: #EEE;
+  margin: 0;
+  padding: 0.125rem 1rem 0.125rem 1.5rem;
+  position: relative;
+  border-radius: 3px;
+
+  &::before {
+    position: absolute;
+    display: block;
+    color: #ccc;
+    content: open-quote;
+    font-size: 4rem;
+    top: -0.3em;
+    left: 1rem
+  }
+}
