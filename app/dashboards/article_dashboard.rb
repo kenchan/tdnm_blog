@@ -15,6 +15,7 @@ class ArticleDashboard < Administrate::BaseDashboard
     published_on: Field::DateTime,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
+    draft: Field::Boolean,
   }
 
   # COLLECTION_ATTRIBUTES
@@ -41,6 +42,7 @@ class ArticleDashboard < Administrate::BaseDashboard
     :body,
     :url_title,
     :published_on,
+    :draft,
   ]
 
   # Overwrite this method to customize how articles are displayed
