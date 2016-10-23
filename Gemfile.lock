@@ -1,17 +1,17 @@
 GIT
-  remote: git://github.com/mariochavez/administrate.git
-  revision: b7c78ed53c62f58a8327eed831a2050aa76a88e1
-  branch: remove-inline_svg
+  remote: git://github.com/thoughtbot/administrate.git
+  revision: 73d4d558d5d1ba0fa8abc9c5849ad2f929b94711
   specs:
-    administrate (0.1.2)
+    administrate (0.2.2)
       autoprefixer-rails (~> 6.0)
-      datetime_picker_rails (~> 0.0.6)
+      bourbon (~> 4.2)
+      datetime_picker_rails (~> 0.0.7)
       jquery-rails (~> 4.0)
       kaminari (~> 0.16)
       momentjs-rails (~> 2.8)
       neat (~> 1.1)
       normalize-rails (~> 3.0)
-      rails (~> 4.2)
+      rails (>= 4.2, < 5.1)
       sass-rails (~> 5.0)
       selectize-rails (~> 0.6)
 

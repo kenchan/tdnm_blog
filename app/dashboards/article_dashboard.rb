@@ -16,7 +16,7 @@ class ArticleDashboard < Administrate::BaseDashboard
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     draft: Field::Boolean,
-  }
+  }.freeze
 
   # COLLECTION_ATTRIBUTES
   # an array of attributes that will be displayed on the model's index page.
@@ -28,11 +28,20 @@ class ArticleDashboard < Administrate::BaseDashboard
     :title,
     :body,
     :url_title,
-  ]
+  ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
-  SHOW_PAGE_ATTRIBUTES = ATTRIBUTE_TYPES.keys
+  SHOW_PAGE_ATTRIBUTES = [
+    :id,
+    :title,
+    :body,
+    :url_title,
+    :published_on,
+    :created_at,
+    :updated_at,
+    :draft,
+  ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
@@ -43,7 +52,7 @@ class ArticleDashboard < Administrate::BaseDashboard
     :url_title,
     :published_on,
     :draft,
-  ]
+  ].freeze
 
   # Overwrite this method to customize how articles are displayed
   # across all pages of the admin dashboard.
