@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/thoughtbot/administrate.git
-  revision: 73d4d558d5d1ba0fa8abc9c5849ad2f929b94711
+  revision: 9f323e9a89a8da7bc562f2fd7dd14a4c8db19c14
   specs:
-    administrate (0.2.2)
+    administrate (0.3.0)
       autoprefixer-rails (~> 6.0)
       bourbon (~> 4.2)
       datetime_picker_rails (~> 0.0.7)
@@ -54,7 +54,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.3)
-    autoprefixer-rails (6.5.1)
+    autoprefixer-rails (6.5.1.1)
       execjs
     bcrypt (3.1.11)
     bourbon (4.2.7)
@@ -75,7 +75,7 @@ GEM
     debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.7.0)
-    font-awesome-rails (4.6.3.1)
+    font-awesome-rails (4.7.0.0)
       railties (>= 3.2, < 5.1)
     github-markdown (0.6.9)
     github-markup (1.4.0)
@@ -200,7 +200,7 @@ GEM
     turbolinks-source (5.0.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (3.0.2)
+    uglifier (3.0.3)
       execjs (>= 0.3.0, < 3)
     warden (1.2.6)
       rack (>= 1.0)
