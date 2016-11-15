@@ -2,21 +2,20 @@ $base_font_color: #333;
 
 html {
   color: $base_font_color;
-  font-size: 18px;
+  font-size: 62.5%;
 }
 
 a {
   color: rgb(59, 148, 217);
 }
 
-* {
-  font-family: Arial, Roboto, "Droid Sans", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
-}
-
 header {
   margin-top: 3rem;
+
   h1 {
     text-align: center;
+    font-size: 3.2rem;
+
     a {
       text-decoration: none;
       color: $base_font_color;
@@ -40,7 +39,7 @@ footer {
       display: inline-block;
       padding-right: 2rem;
       .fa {
-        font-size: 2rem;
+        font-size: 4rem;
       }
     }
   }
@@ -52,7 +51,19 @@ article {
   header {
     time {
       color: #777;
+      font-size: 1.6rem;
     }
+
+    h2 {
+      margin: 1rem auto auto;
+      font-size: 2.4rem;
+    }
+  }
+
+  .body {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    color: #545454;
   }
 
   img {
@@ -61,6 +72,7 @@ article {
 }
 
 .pagination {
+  font-size: 1.6rem;
   text-align: center;
 }
 
