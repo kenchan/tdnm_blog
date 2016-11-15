@@ -1,4 +1,12 @@
 $base_font_color: #333;
+$base_color_1: #1D7FAF;
+$base_color_2: #62A3C4;
+$base_color_3: #B5CDD9;
+$sub_color_1: #676D9C;
+$sub_color_2: #1C88A6;
+$sub_color_3: #D7A72D;
+$sub_color_4: #BB3B4C;
+$sub_color_5: #E6D226;
 
 html {
   color: $base_font_color;
@@ -6,7 +14,10 @@ html {
 }
 
 a {
-  color: rgb(59, 148, 217);
+  color: $base_color_1;
+  &:hover {
+    color: $base_color_2;
+  }
 }
 
 header {
