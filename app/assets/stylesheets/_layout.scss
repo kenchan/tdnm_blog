@@ -61,13 +61,14 @@ article {
   border-top: 1px solid #eee;
 
   header {
+    margin-top: 1rem;
     time {
       color: #777;
-      font-size: 1.6rem;
+      font-size: 1.4rem;
     }
 
     h2 {
-      margin: 1rem auto auto;
+      margin: 0 auto auto;
       font-size: 2.4rem;
     }
   }
@@ -76,6 +77,7 @@ article {
     font-size: 1.8rem;
     line-height: 1.8;
     color: #545454;
+    margin-bottom: 4rem;
   }
 
   img {
