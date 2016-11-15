@@ -15,6 +15,7 @@ html {
 
 a {
   color: $base_color_1;
+  transition: 0.3s;
   &:hover {
     color: $base_color_2;
   }
