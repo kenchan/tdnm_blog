@@ -1,2 +1,2 @@
-class Weblog < ApplicationRecord
+class Weblog < ActiveRecord::Base
 end
