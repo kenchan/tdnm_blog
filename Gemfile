@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.3.0'
+ruby '2.4.0'
 
 gem 'rails', '> 5.0'
 
@@ -22,7 +22,6 @@ gem 'pg'
 gem 'puma'
 gem 'rack-hatena_star'
 gem 'sass-rails'
-gem 'sdoc'
 gem 'slim-rails'
 gem 'turbolinks'
 gem 'uglifier'
