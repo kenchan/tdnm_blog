@@ -1,0 +1,38 @@
+version: "2"
+
+services:
+  https-portal:
+    image: steveltn/https-portal:1.0.0
+    ports:
+      - '80:80'
+      - '443:443'
+    links:
+      - app
+    restart: always
+    environment:
+      DOMAINS: 'local.shu-cream.net -> http://app:3000'
+      STAGE: 'production'
+      # STAGE: 'local'
+      # FORCE_RENEW: 'true'
+  app:
+    build:
+      context: .
+    links:
+      - db
+    environment:
+      - "DATABASE_URL=postgres://postgres:postgresql_password@db:5432/tdnm"
+      - "RAILS_ENV=production"
+      - "SECRET_KEY_BASE=random_keys"
+    depends_on:
+      - db
+  db:
+    image: "postgres"
+    volumes_from:
+      - data
+    environment:
+      - "POSTGRES_USER=postgres"
+      - "POSTGRES_PASSWORD=postgresql_password"
+  data:
+    image: "busybox"
+    volumes:
+      - "/var/lib/postgresql/data"

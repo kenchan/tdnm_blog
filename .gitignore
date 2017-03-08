@@ -17,3 +17,5 @@
 /tmp
 
 /vendor/bundle
+
+docker-compose.yml
