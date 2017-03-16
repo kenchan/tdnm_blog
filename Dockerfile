@@ -1,14 +1,17 @@
-FROM ruby:2.3
+FROM ruby:2.4-alpine
 
-RUN apt-get update && apt-get install -y --no-install-recommends postgresql-client nodejs && rm -rf /var/lib/apt/lists/*
+RUN apk --no-cache add tzdata nodejs postgresql-dev
+RUN cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
 WORKDIR /srv/app
 COPY Gemfile* ./
-RUN bundle install --path vendor/bundle
+
+RUN apk --no-cache --virtual=.rails_deps add git g++ make \
+  && bundle install --deployment \
+  && apk del .rails_deps
+
 COPY ./ .
 RUN bundle exec rake assets:precompile
-
-RUN cp -r /srv/app/public /var/www
 
 EXPOSE 3000
 CMD ["bin/rails", "server", "-b", "0.0.0.0"]
