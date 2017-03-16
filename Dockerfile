@@ -1,6 +1,6 @@
-FROM ruby:2.4
+FROM ruby:2.4-alpine
 
-RUN apt-get update && apt-get install -y --no-install-recommends postgresql-client nodejs && rm -rf /var/lib/apt/lists/*
+RUN apk --no-cache add git g++ make postgresql-dev nodejs
 
 WORKDIR /srv/app
 COPY Gemfile* ./
