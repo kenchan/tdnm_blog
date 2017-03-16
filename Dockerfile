@@ -13,7 +13,5 @@ RUN apk --no-cache --virtual=.rails_deps add git g++ make \
 COPY ./ .
 RUN bundle exec rake assets:precompile
 
-RUN cp -r /srv/app/public /var/www
-
 EXPOSE 3000
 CMD ["bin/rails", "server", "-b", "0.0.0.0"]
