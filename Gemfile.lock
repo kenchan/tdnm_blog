@@ -1,16 +1,16 @@
 GIT
   remote: git://github.com/thoughtbot/administrate.git
-  revision: 182ad50f8373d6eb22a0fbcf74cae633c7395799
+  revision: fe1c03bcc3906320a3df7d4e41f1cf18bdbd8af4
   specs:
     administrate (0.4.0)
       autoprefixer-rails (~> 6.0)
       bourbon (>= 5.0.0.beta.6)
       datetime_picker_rails (~> 0.0.7)
-      jquery-rails (~> 4.0)
+      jquery-rails (>= 4.0)
       kaminari (>= 1.0)
       momentjs-rails (~> 2.8)
       neat (~> 1.1)
-      normalize-rails (~> 3.0)
+      normalize-rails (>= 3.0)
       rails (>= 4.2, < 5.1)
       sass-rails (~> 5.0)
       selectize-rails (~> 0.6)
@@ -136,7 +136,7 @@ GEM
       thor (~> 0.19)
     nokogiri (1.7.1)
       mini_portile2 (~> 2.1.0)
-    normalize-rails (3.0.3)
+    normalize-rails (4.1.1)
     pg (0.20.0)
     puma (3.8.2)
     quiet_assets (1.1.0)
@@ -260,9 +260,6 @@ DEPENDENCIES
   turbolinks
   uglifier (>= 1.3.0)
   web-console
-
-RUBY VERSION
-   ruby 2.4.0p0
 
 BUNDLED WITH
    1.14.6
