@@ -1,6 +1,6 @@
 FROM ruby:2.4-alpine
 
-RUN apk --no-cache add tzdata nodejs postgresql-dev
+RUN apk --no-cache add tzdata nodejs postgresql-dev icu-dev
 RUN cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
 WORKDIR /srv/app
