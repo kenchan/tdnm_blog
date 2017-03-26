@@ -6,7 +6,7 @@ RUN cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 WORKDIR /srv/app
 COPY Gemfile* ./
 
-RUN apk --no-cache --virtual=.rails_deps add git g++ make \
+RUN apk --no-cache --virtual=.rails_deps add git g++ make cmake \
   && bundle install --deployment \
   && apk del .rails_deps
 
