@@ -19,3 +19,5 @@
 /vendor/bundle
 
 docker-compose.yml
+
+public/sitemap.xml*
