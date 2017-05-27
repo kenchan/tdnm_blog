@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/thoughtbot/administrate.git
-  revision: 164fdf8257b12b0fee59589ec47bbac04fc9d13a
+  revision: a34ee154d9b7af1a6fe29ce14671f6c66398210c
   specs:
     administrate (0.7.0)
       actionpack (>= 4.2, < 5.2)
@@ -189,7 +189,7 @@ GEM
       actionpack (>= 3.1)
       railties (>= 3.1)
       slim (~> 3.0)
-    spring (2.0.1)
+    spring (2.0.2)
       activesupport (>= 4.2)
     sprockets (3.7.1)
       concurrent-ruby (~> 1.0)
