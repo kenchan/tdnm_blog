@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/thoughtbot/administrate.git
-  revision: a34ee154d9b7af1a6fe29ce14671f6c66398210c
+  revision: 573e82cfac51af6bd85fe90698e50f4f05833e65
   specs:
     administrate (0.7.0)
       actionpack (>= 4.2, < 5.2)
@@ -52,7 +52,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.4)
-    autoprefixer-rails (7.1.1)
+    autoprefixer-rails (7.1.1.2)
       execjs
     bcrypt (3.1.11)
     bourbon (4.3.4)
@@ -126,7 +126,7 @@ GEM
       thor (~> 0.19)
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
-    pg (0.20.0)
+    pg (0.21.0)
     puma (3.9.1)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
