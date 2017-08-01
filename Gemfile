@@ -4,7 +4,7 @@ gem 'rails', '~> 4.2'
 
 gem 'administrate', github: 'thoughtbot/administrate'
 gem 'bourbon'
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails', '~> 4.2.2'
 gem 'font-awesome-rails'
 gem 'github-markdown'
 gem 'github-markup', require: 'github/markup'
