@@ -119,7 +119,7 @@ GEM
       bcrypt
       rails
       warden
-    monban-generators (1.0.0)
+    monban-generators (1.0.1)
       monban (>= 0.0.12)
     multi_json (1.12.1)
     neat (2.1.0)
@@ -202,7 +202,7 @@ GEM
     sprockets (3.7.1)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
-    sprockets-rails (3.2.0)
+    sprockets-rails (3.2.1)
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
