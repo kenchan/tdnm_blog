@@ -2,11 +2,12 @@ language: ruby
 addons:
   postgresql: '9.4'
 services:
-- postgresql
+  - postgresql
 before_script:
-- psql -c 'create database tdnm_test;' -U postgres
-- cp config/database.yml.travis config/database.yml
-- bin/rails test:db
+  - psql -c 'create database tdnm_test;' -U postgres
+  - cp config/database.yml.travis config/database.yml
+script:
+  - bin/rails test:db
 notifications:
   webhooks:
   - https://idobata.io/hook/travis_ci/07a29fae-2f04-4390-9fdb-1f694dc328a3
