@@ -21,6 +21,13 @@ a {
   }
 }
 
+div.container {
+  width: 80%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 header {
   margin-top: 3rem;
 
@@ -33,10 +40,6 @@ header {
       color: $base_font_color;
     }
   }
-}
-
-div.container {
-  @include outer-container;
 }
 
 footer {

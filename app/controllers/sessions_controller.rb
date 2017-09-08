@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
   include Monban::ControllerHelpers
 
-  skip_before_action :require_login, only: [:new, :create]
+#  skip_before_action :require_login, only: [:new, :create]
 
   def new
   end
