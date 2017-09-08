@@ -1,14 +1,14 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 4.2'
+gem 'rails', '~> 5.0.0'
 
 gem 'administrate', github: 'thoughtbot/administrate'
 gem 'bourbon'
-gem 'coffee-rails', '~> 4.2.2'
+gem 'coffee-rails'
 gem 'font-awesome-rails'
 gem 'github-markdown'
 gem 'github-markup', require: 'github/markup'
-gem 'jbuilder', '~> 2.0'
+gem 'jbuilder'
 gem 'jquery-rails'
 gem 'kaminari'
 gem 'marked-rails'
@@ -18,18 +18,13 @@ gem 'monban-generators'
 gem 'neat'
 gem 'pg'
 gem 'puma'
-gem 'quiet_assets'
 gem 'rack-hatena_star'
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'sitemap_generator'
 gem 'slim-rails'
 gem 'turbolinks'
-gem 'uglifier', '>= 1.3.0'
-
-group :development do
-  gem 'web-console'
-end
+gem 'uglifier'
 
 group :production do
   gem 'rack-google-analytics'

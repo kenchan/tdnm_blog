@@ -17,42 +17,45 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    actionmailer (4.2.9)
-      actionpack (= 4.2.9)
-      actionview (= 4.2.9)
-      activejob (= 4.2.9)
+    actioncable (5.0.6)
+      actionpack (= 5.0.6)
+      nio4r (>= 1.2, < 3.0)
+      websocket-driver (~> 0.6.1)
+    actionmailer (5.0.6)
+      actionpack (= 5.0.6)
+      actionview (= 5.0.6)
+      activejob (= 5.0.6)
       mail (~> 2.5, >= 2.5.4)
-      rails-dom-testing (~> 1.0, >= 1.0.5)
-    actionpack (4.2.9)
-      actionview (= 4.2.9)
-      activesupport (= 4.2.9)
-      rack (~> 1.6)
-      rack-test (~> 0.6.2)
-      rails-dom-testing (~> 1.0, >= 1.0.5)
+      rails-dom-testing (~> 2.0)
+    actionpack (5.0.6)
+      actionview (= 5.0.6)
+      activesupport (= 5.0.6)
+      rack (~> 2.0)
+      rack-test (~> 0.6.3)
+      rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    actionview (4.2.9)
-      activesupport (= 4.2.9)
+    actionview (5.0.6)
+      activesupport (= 5.0.6)
       builder (~> 3.1)
       erubis (~> 2.7.0)
-      rails-dom-testing (~> 1.0, >= 1.0.5)
+      rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
-    activejob (4.2.9)
-      activesupport (= 4.2.9)
-      globalid (>= 0.3.0)
-    activemodel (4.2.9)
-      activesupport (= 4.2.9)
-      builder (~> 3.1)
-    activerecord (4.2.9)
-      activemodel (= 4.2.9)
-      activesupport (= 4.2.9)
-      arel (~> 6.0)
-    activesupport (4.2.9)
+    activejob (5.0.6)
+      activesupport (= 5.0.6)
+      globalid (>= 0.3.6)
+    activemodel (5.0.6)
+      activesupport (= 5.0.6)
+    activerecord (5.0.6)
+      activemodel (= 5.0.6)
+      activesupport (= 5.0.6)
+      arel (~> 7.0)
+    activesupport (5.0.6)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (~> 0.7)
       minitest (~> 5.1)
-      thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    arel (6.0.4)
-    autoprefixer-rails (7.1.3)
+    arel (7.1.4)
+    autoprefixer-rails (7.1.4)
       execjs
     bcrypt (3.1.11)
     bourbon (4.3.4)
@@ -70,7 +73,6 @@ GEM
     concurrent-ruby (1.0.5)
     datetime_picker_rails (0.0.7)
       momentjs-rails (>= 2.8.1)
-    debug_inspector (0.0.3)
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.18)
@@ -108,6 +110,7 @@ GEM
     marked-rails (0.3.2.0)
     meta-tags (2.6.0)
       actionpack (>= 3.2.0, < 5.3)
+    method_source (0.8.2)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
@@ -125,13 +128,12 @@ GEM
     neat (2.1.0)
       sass (~> 3.4)
       thor (~> 0.19)
+    nio4r (2.1.0)
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
     pg (0.21.0)
     puma (3.10.0)
-    quiet_assets (1.1.0)
-      railties (>= 3.1, < 5.0)
-    rack (1.6.8)
+    rack (2.0.3)
     rack-google-analytics (1.2.0)
       actionpack
       activesupport
@@ -139,23 +141,21 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
-    rails (4.2.9)
-      actionmailer (= 4.2.9)
-      actionpack (= 4.2.9)
-      actionview (= 4.2.9)
-      activejob (= 4.2.9)
-      activemodel (= 4.2.9)
-      activerecord (= 4.2.9)
-      activesupport (= 4.2.9)
-      bundler (>= 1.3.0, < 2.0)
-      railties (= 4.2.9)
-      sprockets-rails
-    rails-deprecated_sanitizer (1.0.3)
-      activesupport (>= 4.2.0.alpha)
-    rails-dom-testing (1.0.8)
-      activesupport (>= 4.2.0.beta, < 5.0)
-      nokogiri (~> 1.6)
-      rails-deprecated_sanitizer (>= 1.0.1)
+    rails (5.0.6)
+      actioncable (= 5.0.6)
+      actionmailer (= 5.0.6)
+      actionpack (= 5.0.6)
+      actionview (= 5.0.6)
+      activejob (= 5.0.6)
+      activemodel (= 5.0.6)
+      activerecord (= 5.0.6)
+      activesupport (= 5.0.6)
+      bundler (>= 1.3.0)
+      railties (= 5.0.6)
+      sprockets-rails (>= 2.0.0)
+    rails-dom-testing (2.0.3)
+      activesupport (>= 4.2.0)
+      nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
     rails_12factor (0.0.3)
@@ -163,9 +163,10 @@ GEM
       rails_stdout_logging
     rails_serve_static_assets (0.0.5)
     rails_stdout_logging (0.0.5)
-    railties (4.2.9)
-      actionpack (= 4.2.9)
-      activesupport (= 4.2.9)
+    railties (5.0.6)
+      actionpack (= 5.0.6)
+      activesupport (= 5.0.6)
+      method_source
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (12.0.0)
@@ -219,10 +220,9 @@ GEM
       execjs (>= 0.3.0, < 3)
     warden (1.2.7)
       rack (>= 1.0)
-    web-console (3.3.0)
-      activemodel (>= 4.2)
-      debug_inspector
-      railties (>= 4.2)
+    websocket-driver (0.6.5)
+      websocket-extensions (>= 0.1.0)
+    websocket-extensions (0.1.2)
 
 PLATFORMS
   ruby
@@ -231,11 +231,11 @@ DEPENDENCIES
   administrate!
   bourbon
   byebug
-  coffee-rails (~> 4.2.2)
+  coffee-rails
   font-awesome-rails
   github-markdown
   github-markup
-  jbuilder (~> 2.0)
+  jbuilder
   jquery-rails
   kaminari
   marked-rails
@@ -245,19 +245,17 @@ DEPENDENCIES
   neat
   pg
   puma
-  quiet_assets
   rack-google-analytics
   rack-hatena_star
-  rails (~> 4.2)
+  rails (~> 5.0.0)
   rails_12factor
-  sass-rails (~> 5.0)
+  sass-rails
   sdoc (~> 0.4.0)
   sitemap_generator
   slim-rails
   spring
   turbolinks
-  uglifier (>= 1.3.0)
-  web-console
+  uglifier
 
 BUNDLED WITH
-   1.16.0.pre.1
+   1.16.0.pre.2
