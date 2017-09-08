@@ -7,13 +7,6 @@ before_script:
 - psql -c 'create database tdnm_test;' -U postgres
 - cp config/database.yml.travis config/database.yml
 - bundle exec rake db:migrate RAILS_ENV=test
-deploy:
-  provider: heroku
-  api_key:
-    secure: Wf0Y5HTJqq0V91DYblQ1eHLE+7V4ILej/5opjV1iQRWP2NMxdkeDwcQG/swEqyeU5LTz0kyJ967ZLvlwIQkIaacQedEhm0aZYOvFcwmmKcIohKdD2MLvgkqxzbCzZA6vNOSyPaUD91WBy6MmKU6CveUsA4KzRu6FOzmtZRdG2fijj3kVZ5o4GzUSF7w7E8RefutqvkLLggIkZKoWckWKG1jKMTIpVHKsgsZs61e2QW9rUYMngoPEEB+NAljXpkWerlCs/Ihj2a7nFskJ5eKDfMvHF2HeZ1UhDJqDlTzCmfAGHjHT9x4ztcpbT3jiCrtjQFz/CTxYUNAsFEdxALsLColcaPxhit9Q23j9gzG0GFmsgbgUcBiRcDXFRCT3MlG9hR26Ubq4BuX1orIAPOGJpsCctkGXpcxU3sYuV4nbB3vG+swlfylwy2CHLj67/6xuT0B1GOBR4N23WaFaszETVU9bZBcwlV2h1nPOgFc4auCHtBZtd06DEME24jYQXEcwBSUR292Q4W4eETt3oHW1OXu0DhO0wMwG/Su1j69RZaRsV/MzG0Ki1A3W8RjVg0BlOY3/fmVgVCgag2u+xZus7mXAHuKZlpPS3fNDx61KD0PhFP1+4voZKrvQpHVIkA1Jq6CN7+GYkNA748kF4nyRSZ73E1NBmTTexs3FQm8gmfI=
-  app: tdnm
-  on:
-    repo: kenchan/tdnm
 notifications:
   webhooks:
   - https://idobata.io/hook/travis_ci/07a29fae-2f04-4390-9fdb-1f694dc328a3
