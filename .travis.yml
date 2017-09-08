@@ -6,7 +6,7 @@ services:
 before_script:
 - psql -c 'create database tdnm_test;' -U postgres
 - cp config/database.yml.travis config/database.yml
-- bundle exec rake db:migrate RAILS_ENV=test
+- bin/rails test:db
 notifications:
   webhooks:
   - https://idobata.io/hook/travis_ci/07a29fae-2f04-4390-9fdb-1f694dc328a3
