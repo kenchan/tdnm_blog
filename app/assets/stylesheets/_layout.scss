@@ -35,10 +35,6 @@ header {
   }
 }
 
-div.container {
-  @include outer-container;
-}
-
 footer {
   border-top: 1px solid #eee;
 
