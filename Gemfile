@@ -26,6 +26,10 @@ gem 'slim-rails'
 gem 'turbolinks'
 gem 'uglifier'
 
+group :development do
+  gem 'spring'
+end
+
 group :production do
   gem 'rack-google-analytics'
   gem 'rails_12factor'
@@ -33,5 +37,4 @@ end
 
 group :development, :test do
   gem 'byebug'
-  gem 'spring'
 end
