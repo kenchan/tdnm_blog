@@ -23,6 +23,7 @@ services:
       - "DATABASE_URL=postgres://postgres:postgresql_password@db:5432/tdnm"
       - "RAILS_ENV=production"
       - "SECRET_KEY_BASE=random_keys"
+      - "TRACKING_ID=UA-00000000-0"
     depends_on:
       - db
   db:

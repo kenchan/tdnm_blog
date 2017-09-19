@@ -16,6 +16,7 @@ gem 'monban'
 gem 'monban-generators'
 gem 'pg'
 gem 'puma'
+gem 'rack-google-analytics'
 gem 'rack-hatena_star'
 gem 'sass-rails'
 gem 'sdoc', '~> 0.4.0', group: :doc
@@ -29,7 +30,6 @@ group :development do
 end
 
 group :production do
-  gem 'rack-google-analytics'
   gem 'rails_12factor'
 end
 
