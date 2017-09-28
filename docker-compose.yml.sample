@@ -24,6 +24,7 @@ services:
       - "RAILS_ENV=production"
       - "SECRET_KEY_BASE=random_keys"
       - "TRACKING_ID=UA-00000000-0"
+      - "DEFAULT_URL=https://your-host.example.com"
     depends_on:
       - db
   db:

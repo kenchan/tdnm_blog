@@ -1,4 +1,4 @@
-SitemapGenerator::Sitemap.default_host = ENV['default_host'] || "http://www.example.com"
+SitemapGenerator::Sitemap.default_host = ENV['DEFAULT_HOST'] || "http://www.example.com"
 
 SitemapGenerator::Sitemap.create do
   Article.find_each do |a|
