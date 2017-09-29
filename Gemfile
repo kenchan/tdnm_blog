@@ -7,7 +7,7 @@ end
 
 gem 'rails', '~> 5.1.0'
 
-gem 'administrate', github: 'thoughtbot/administrate'
+gem 'administrate'
 gem 'coffee-rails'
 gem 'font-awesome-rails'
 gem 'github-markdown'
