@@ -50,7 +50,7 @@ GEM
       sass-rails (~> 5.0)
       selectize-rails (~> 0.6)
     arel (8.0.0)
-    autoprefixer-rails (7.1.4.1)
+    autoprefixer-rails (7.1.5)
       execjs
     bcrypt (3.1.11)
     builder (3.2.3)
@@ -62,6 +62,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
+    commonmarker (0.17.4)
+      ruby-enum (~> 0.5)
     concurrent-ruby (1.0.5)
     crass (1.0.2)
     datetime_picker_rails (0.0.7)
@@ -71,8 +73,6 @@ GEM
     ffi (1.9.18)
     font-awesome-rails (4.7.0.2)
       railties (>= 3.2, < 5.2)
-    github-markdown (0.6.9)
-    github-markup (1.6.1)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     i18n (0.9.0)
@@ -170,8 +170,10 @@ GEM
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     rdoc (4.3.0)
+    ruby-enum (0.7.1)
+      i18n
     ruby_dep (1.5.0)
-    sass (3.5.1)
+    sass (3.5.2)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -185,7 +187,7 @@ GEM
     sdoc (0.4.2)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
-    selectize-rails (0.12.4)
+    selectize-rails (0.12.4.1)
     sitemap_generator (6.0.0)
       builder (~> 3.0)
     slim (3.0.8)
@@ -228,9 +230,8 @@ DEPENDENCIES
   administrate
   byebug
   coffee-rails
+  commonmarker
   font-awesome-rails
-  github-markdown
-  github-markup
   jbuilder
   jquery-rails
   kaminari
