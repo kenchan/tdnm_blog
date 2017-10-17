@@ -3,7 +3,7 @@ article
     time= @article.published_on.strftime('%Y-%m-%d (%a)')
     h2= link_to @article.title, article_url(@article)
 
-  .body== ::GitHub::Markup::Markdown.new.render(GitHub::Markups::MARKUP_MARKDOWN, @article.body)
+  .body== CommonMarker.render_html(@article.body)
 
   a href="http://b.hatena.ne.jp/entry/#{article_url(@article, only_path: false)}" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"
     img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;"
