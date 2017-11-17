@@ -13,11 +13,11 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*
+/tmp/*
 !/log/.keep
-/tmp
+!/tmp/.keep
 
-/vendor/bundle
+/node_modules
+/yarn-error.log
 
-docker-compose.yml
-
-public/sitemap.xml*
+.byebug_history
