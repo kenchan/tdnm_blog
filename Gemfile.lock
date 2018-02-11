@@ -126,7 +126,7 @@ GEM
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     pg (0.21.0)
-    puma (3.11.0)
+    puma (3.11.2)
     rack (2.0.4)
     rack-google-analytics (1.2.0)
       actionpack
