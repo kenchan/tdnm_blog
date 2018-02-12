@@ -23,7 +23,7 @@ gem 'puma'
 gem 'rack-google-analytics'
 gem 'rack-hatena_star'
 gem 'sass-rails'
-gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'sdoc', '~> 1.0.0', group: :doc
 gem 'sitemap_generator'
 gem 'slim-rails'
 gem 'turbolinks'
