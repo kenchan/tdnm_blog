@@ -18,7 +18,7 @@ gem 'marked-rails'
 gem 'meta-tags'
 gem 'pg'
 gem 'puma'
-gem 'rack-google-analytics'
+gem 'rack-tracker'
 gem 'rack-hatena_star'
 gem 'sass-rails'
 gem 'sdoc', '~> 1.0.0', group: :doc
