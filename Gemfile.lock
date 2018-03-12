@@ -118,7 +118,7 @@ GEM
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     pg (1.0.0)
-    puma (3.11.2)
+    puma (3.11.3)
     rack (2.0.4)
     rack-hatena_star (0.1.0)
       rack
