@@ -23,6 +23,20 @@ html
         hljs.initHighlightingOnLoad();
       }());
 
+    script async=true src="https://www.googletagmanager.com/gtag/js?id=#{ENV['TRACKING_ID']}"
+    javascript:
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+      gtag('config', '#{ENV['TRACKING_ID']}');
+
+    script src="https://s.hatena.ne.jp/js/HatenaStar.js"
+    javascript:
+      Hatena.Star.Token = "64ec46b14d3213944171cf6c8966b68e2a0a46dd";
+      Hatena.Star.SiteConfig = {
+        entryNodes: {"article":{"uri":"header h2 a","title":"h2","container":"header h2"}}
+      };
+
   body
     .container
       header
