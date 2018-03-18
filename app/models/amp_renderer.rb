@@ -13,4 +13,12 @@ class AmpRenderer < CommonMarker::HtmlRenderer
       end
     end
   end
+
+  def image(node)
+    out('<amp-img height="200" layout="fixed-height" src="', escape_href(node.url), '"')
+    plain do
+      out(' alt="', :children, '"')
+    end
+    out(' />')
+  end
 end
