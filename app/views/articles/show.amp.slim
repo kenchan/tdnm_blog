@@ -1,0 +1,19 @@
+- content_for :cannonical do
+  = article_url(@article, only_path: false)
+
+article.article
+  header.article__header
+    time.article__published_on= @article.published_on.strftime('%Y-%m-%d (%a)')
+    h1.article__title= @article.title
+
+  .article__body== CommonMarker.render_html(@article.body)
+
+  amp-social-share width=50 height=40 type="twitter"
+  amp-social-share width=50 height=40 type="hatena_bookmark" data-share-endpoint="http://b.hatena.ne.jp/append?#{article_url(@article, only_path: false)}" B!
+  amp-social-share width=50 height=40 type="system"
+
+  amp-iframe width=600 height=140 layout="responsive" sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms" resizable=true src="https://kenchan.github.io/disqus-apm-html/thread#https://diary.shu-cream.net#{article_url(@article)}"
+    div overflow=true
+
+  amp-ad width="100vw" height=320 type="adsense" data-ad-client="ca-pub-6859889629721212" data-ad-slot="6263803791" data-auto-format="rspv" data-full-width=true
+    div overflow=true

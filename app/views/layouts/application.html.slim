@@ -11,6 +11,8 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
 
     link rel='alternate' type='application/atom+xml' title='atom' href='/atom.xml'
+    - if @article
+      link rel="amphtml" href=article_url(@article, format: :amp, only_path: false)
 
     link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/yakuhanjp@2.0.0/dist/css/yakuhanjp.min.css'
     link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/default.min.css'
@@ -22,6 +24,20 @@ html
       (function () {
         hljs.initHighlightingOnLoad();
       }());
+
+    script async=true src="https://www.googletagmanager.com/gtag/js?id=#{ENV['TRACKING_ID']}"
+    javascript:
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+      gtag('config', '#{ENV['TRACKING_ID']}');
+
+    script src="https://s.hatena.ne.jp/js/HatenaStar.js"
+    javascript:
+      Hatena.Star.Token = "64ec46b14d3213944171cf6c8966b68e2a0a46dd";
+      Hatena.Star.SiteConfig = {
+        entryNodes: {"article":{"uri":"header h2 a","title":"h2","container":"header h2"}}
+      };
 
   body
     .container

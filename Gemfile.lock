@@ -120,14 +120,8 @@ GEM
     pg (1.0.0)
     puma (3.11.3)
     rack (2.0.4)
-    rack-hatena_star (0.1.0)
-      rack
     rack-test (0.8.3)
       rack (>= 1.0, < 3)
-    rack-tracker (1.5.0)
-      activesupport (>= 3.0)
-      rack (>= 1.4)
-      tilt (>= 1.4)
     rails (5.1.5)
       actioncable (= 5.1.5)
       actionmailer (= 5.1.5)
@@ -228,8 +222,6 @@ DEPENDENCIES
   meta-tags
   pg
   puma
-  rack-hatena_star
-  rack-tracker
   rails (~> 5.1.5)
   rails_12factor
   sass-rails
