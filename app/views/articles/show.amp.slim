@@ -6,7 +6,7 @@ article.article
     time.article__published_on= @article.published_on.strftime('%Y-%m-%d (%a)')
     h1.article__title= @article.title
 
-  .article__body== CommonMarker.render_html(@article.body)
+  .article__body== AmpRenderer.new.render(CommonMarker.render_doc(@article.body))
 
   amp-social-share width=50 height=40 type="twitter"
   amp-social-share width=50 height=40 type="hatena_bookmark" data-share-endpoint="http://b.hatena.ne.jp/append?#{article_url(@article, only_path: false)}" B!
