@@ -10,6 +10,8 @@ class AmpRenderer < CommonMarker::HtmlRenderer
         out(%(<amp-iframe width="120" height="240" title="amazon" layout="fixed" sandbox="allow-scripts allow-same-origin allow-popups" src="https:#{$1}">Amazon Associate link</amp-iframe>))
       when %r{<iframe[^>]+https://www.youtube.com/embed/([a-zA-Z0-9]+)}
         out(%(<amp-youtube data-videoid="#{$1}" width="480" height="270" layout="responsive"></amp-youtube>))
+      when %r{<script[^>]+class="speakerdeck-embed".+data-id="([a-zA-Z0-9]+)"}
+        out(%(<amp-iframe width="600" height="450" title="speakerdeck" layout="responsive" sandbox="allow-scripts allow-same-origin allow-popups"  src="https://speakerdeck.com/player/#{$1}?"></amp-iframe>))
       else
         super(node)
       end
