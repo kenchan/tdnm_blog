@@ -10,6 +10,7 @@ class WeblogDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     title: Field::String,
+    default_eye_catching_image_url: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -31,6 +32,7 @@ class WeblogDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :id,
     :title,
+    :default_eye_catching_image_url,
     :created_at,
     :updated_at,
   ].freeze
@@ -40,6 +42,7 @@ class WeblogDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
     :title,
+    :default_eye_catching_image_url,
   ].freeze
 
   # Overwrite this method to customize how weblogs are displayed
