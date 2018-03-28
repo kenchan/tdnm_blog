@@ -20,7 +20,11 @@ module ApplicationHelper
       charset: 'utf-8',
       title: @article.try(:title),
       reverse: true,
-      description: meta_description
+      description: meta_description,
+      og: {
+        image: weblog.default_eye_catching_image_url,
+        type: @article ? 'article' : 'website'
+      }
     }
   end
 end
