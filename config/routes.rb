@@ -16,4 +16,8 @@ Rails.application.routes.draw do
   get '/:year/:month', to: 'articles#list', year: /\d{4}/, month: /\d{2}/
   get '/:year', to: 'articles#list', year: /\d{4}/
   get '/blog/:year/:month/:day/:title', to: redirect('/%{year}/%{month}/%{day}/%{title}')
+
+  namespace :amp do
+    get '/:year/:month/:day/:title', to: 'articles#show', year: /\d{4}/, month: /\d{2}/, day: /\d{2}/
+  end
 end
