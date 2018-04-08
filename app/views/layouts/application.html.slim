@@ -12,7 +12,7 @@ html
 
     link rel='alternate' type='application/atom+xml' title='atom' href='/atom.xml'
     - if @article
-      link rel="amphtml" href=article_url(@article, format: :amp, only_path: false)
+      link rel="amphtml" href=amp_article_url(@article, only_path: false)
 
     link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/yakuhanjp@2.0.0/dist/css/yakuhanjp.min.css'
     link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/default.min.css'
