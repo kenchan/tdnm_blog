@@ -21,41 +21,97 @@
 
     <style amp-custom>
       @font-face {
-         font-family: 'Noto Sans CJK JP';
-         font-style: normal;
-         font-weight: 400;
-         src: local('Noto Sans CKJ JP Regular'),
-           url(//fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Regular.woff2) format('woff2'),
+        font-family: 'Noto Sans CJK JP';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Noto Sans CKJ JP Regular'),
+        url(//fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Regular.woff2) format('woff2'),
       }
       @font-face {
-         font-family: 'Noto Sans CJK JP';
-         font-style: normal;
-         font-weight: 700;
-         src: local('Noto Sans CKJ JP Bold')
-          url(//fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Bold.woff2) format('woff2'),
+        font-family: 'Noto Sans CJK JP';
+        font-style: normal;
+        font-weight: 700;
+        src: local('Noto Sans CKJ JP Bold')
+        url(//fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Bold.woff2) format('woff2'),
       }
+
       body {
         font-family: "Noto Sans", "Noto Sans CJK JP", sans-serif;
+        margin: 0;
+        color: #333;
       }
+
       main {
-        width: 80%;
+        width: 60%;
         margin: 1rem auto;
       }
+
+      @media screen and (max-device-width: 480px) {
+        main {
+          width: 90%;
+        }
+      }
+
       a {
         overflow-wrap: break-word;
+        color: #1D7FAF;
+        text-decoration: none;
+        transition: 0.3s;
       }
+
+      .site_header {
+        z-index: 100;
+        top: 0;
+        position: sticky;
+        height: 4rem;
+        border-bottom: 1px solid #eee;
+        background: #dfebfd;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+      }
+
+      .site_header__title {
+        margin: 0 auto 0;
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: #1a455a;
+      }
+
       code {
         background-color: #f0f0f0;
         padding: 0.2em;
         border-radius: 4px;
         font-family: monospace, "Noto Sans", "Noto Sans CJK JP", sans-serif;
       }
+
       pre > code {
         display: block;
         border: none;
         line-height: 1.6em;
         padding: 0.5em;
         overflow-x: auto;
+      }
+
+      .article__title {
+        margin-top: 0;
+        padding-top: 0;
+        font-size: 1.7rem;
+        font-weight: 700;
+        line-height: 2.5rem;
+      }
+
+      .article__published_on {
+        padding: 0;
+        font-size: 0.75rem;
+        color: #777;
+      }
+
+      .article__body {
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+        color: #545454;
+        line-height: 1.7em;
       }
       amp-social-share {
         margin-left: 5px;
@@ -67,46 +123,6 @@
         line-height: 40px;
         text-align: center;
         font-size: 28px;
-      }
-      .site_header {
-        z-index: 100;
-        top: 0;
-        position: sticky;
-        height: 3.5rem;
-        border-bottom: 1px solid #cacaca;
-        background: #fefefe;
-        display: flex;
-        align-items: center;
-      }
-      .site_header__title {
-        margin: 0 auto 0;
-        font-size: 1.2rem;
-        text-decoration: none;
-        color: inherit;
-      }
-      @media screen and (max-device-width: 480px) {
-        main {
-          width: 90%;
-        }
-      }
-      .article__title {
-        margin-top: 0;
-        padding-top: 0;
-        font-size: 1.7rem;
-        font-weight: 700;
-        line-height: 2.5rem;
-        color: #333;
-      }
-      .article__published_on {
-        padding: 0;
-        font-size: 0.75rem;
-        color: #777;
-      }
-      .article__body {
-        margin-top: 1.5rem;
-        margin-bottom: 2rem;
-        color: #545454;
-        line-height: 1.7em;
       }
     </style>
   </head>
