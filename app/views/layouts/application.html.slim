@@ -34,27 +34,27 @@ html
 
     script src="https://s.hatena.ne.jp/js/HatenaStar.js"
     javascript:
-      Hatena.Star.Token = "64ec46b14d3213944171cf6c8966b68e2a0a46dd";
-      Hatena.Star.SiteConfig = {
-        entryNodes: {"article":{"uri":"header h2 a","title":"h2","container":"header h2"}}
-      };
+      document.addEventListener("DOMContentLoaded", function() {
+        Hatena.Star.Token = "64ec46b14d3213944171cf6c8966b68e2a0a46dd";
+        Hatena.Star.SiteConfig = {
+          entryNodes: {"article":{"uri":"window.location","title":"h2","container":"header h2"}}
+        };
+      });
 
   body
-    .container
-      header
-        h1= link_to weblog.title, root_path
+    header.site_header
+      = link_to weblog.title, root_path, class: 'site_header__title'
+    main
+      == yield
 
-      section
-        == yield
-
-      footer
-        ul
-          li
-            a href="https://github.com/kenchan"
-              i class="fa fa-github-square"
-          li
-            a href="https://twitter.com/kenchan"
-              i class="fa fa-twitter-square"
-          li
-            a href="https://facebook.com/kenichi.taka"
-              i class="fa fa-facebook-square"
+    footer
+      ul
+        li
+          a href="https://github.com/kenchan"
+            i class="fa fa-github-square"
+        li
+          a href="https://twitter.com/kenchan"
+            i class="fa fa-twitter-square"
+        li
+          a href="https://facebook.com/kenichi.taka"
+            i class="fa fa-facebook-square"
