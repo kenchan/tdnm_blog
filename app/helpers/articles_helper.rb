@@ -20,7 +20,7 @@ module ArticlesHelper
 
     url_for(
       {
-        controller: 'articles',
+        controller: '/articles',
         action: 'show',
         year: d.year,
         month: '%02d' % d.month,
