@@ -9,7 +9,7 @@ module ArticlesHelper
         year: d.year,
         month: '%02d' % d.month,
         day: '%02d' % d.day,
-        title: article.url_title,
+        slug: article.slug,
         format: 'html'
       }.merge(opts)
     )
@@ -25,7 +25,7 @@ module ArticlesHelper
         year: d.year,
         month: '%02d' % d.month,
         day: '%02d' % d.day,
-        title: article.url_title,
+        slug: article.slug,
         format: 'html'
       }.merge(opts)
     )

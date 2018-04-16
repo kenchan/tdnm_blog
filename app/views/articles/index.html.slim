@@ -2,7 +2,7 @@
   article.article
     header.article__header
       time.article__published_on= a.published_on.strftime('%Y-%m-%d (%a)')
-      h2.article__title= link_to a.title, "#{a.published_on.strftime('%Y/%m/%d')}/#{a.url_title}.html"
+      h2.article__title= link_to a.title, "#{a.published_on.strftime('%Y/%m/%d')}/#{a.slug}.html"
 
     .article__body== CommonMarker.render_html(a.body)
 
