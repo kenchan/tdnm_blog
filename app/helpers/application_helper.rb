@@ -22,7 +22,7 @@ module ApplicationHelper
       reverse: true,
       description: meta_description,
       og: {
-        image: weblog.default_eye_catching_image_url,
+        image: @article.try(:eye_catching_image_url) ? @article.try(:eye_catching_image_url) : weblog.default_eye_catching_image_url,
         type: @article ? 'article' : 'website'
       }
     }
