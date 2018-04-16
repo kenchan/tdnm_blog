@@ -12,6 +12,7 @@ class ArticleDashboard < Administrate::BaseDashboard
     title: Field::String,
     body: Field::Text,
     slug: Field::String,
+    eye_catching_image_url: Field::String,
     published_on: Field::DateTime,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -37,6 +38,7 @@ class ArticleDashboard < Administrate::BaseDashboard
     :title,
     :body,
     :slug,
+    :eye_catching_image_url,
     :published_on,
     :created_at,
     :updated_at,
@@ -50,6 +52,7 @@ class ArticleDashboard < Administrate::BaseDashboard
     :title,
     :body,
     :slug,
+    :eye_catching_image_url,
     :published_on,
     :draft,
   ].freeze
