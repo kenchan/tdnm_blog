@@ -11,7 +11,7 @@ class ArticleDashboard < Administrate::BaseDashboard
     id: Field::Number,
     title: Field::String,
     body: Field::Text,
-    url_title: Field::String,
+    slug: Field::String,
     published_on: Field::DateTime,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -27,7 +27,7 @@ class ArticleDashboard < Administrate::BaseDashboard
     :id,
     :title,
     :body,
-    :url_title,
+    :slug,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -36,7 +36,7 @@ class ArticleDashboard < Administrate::BaseDashboard
     :id,
     :title,
     :body,
-    :url_title,
+    :slug,
     :published_on,
     :created_at,
     :updated_at,
@@ -49,7 +49,7 @@ class ArticleDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :title,
     :body,
-    :url_title,
+    :slug,
     :published_on,
     :draft,
   ].freeze

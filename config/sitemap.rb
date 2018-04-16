@@ -10,7 +10,7 @@ SitemapGenerator::Sitemap.create do
         year: d.year,
         month: '%02d' % d.month,
         day: '%02d' % d.day,
-        title: a.url_title,
+        slug: a.slug,
         format: 'html',
         only_path: true
       ),
