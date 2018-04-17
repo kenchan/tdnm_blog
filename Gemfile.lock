@@ -50,7 +50,7 @@ GEM
       sass-rails (~> 5.0)
       selectize-rails (~> 0.6)
     arel (8.0.0)
-    autoprefixer-rails (8.2.0)
+    autoprefixer-rails (8.3.0)
       execjs
     builder (3.2.3)
     byebug (10.0.2)
