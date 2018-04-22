@@ -7,13 +7,18 @@ article.article
 
   .article__body== CommonMarker.render_html(@article.body)
 
-  a href="http://b.hatena.ne.jp/entry/#{article_url(@article, only_path: false)}" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"
-    img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;"
-  a href="https://twitter.com/share" class="twitter-share-button" data-via="kenchan"
-    Tweet
-  .fb-like(data-href="#{article_url(@article, only_path: false)}" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false")
-  javascript:
-    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+  .article__footer
+    .article__footer__share_buttons
+      .article__footer__share_button_item
+        a href="http://b.hatena.ne.jp/entry/#{article_url(@article, only_path: false)}" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"
+          img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;"
+      .article__footer__share_button_item
+        a href="https://twitter.com/share" class="twitter-share-button" data-via="kenchan"
+          Tweet
+        javascript:
+          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+      .article__footer__share_button_item
+        .fb-like(data-href="#{article_url(@article, only_path: false)}" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false")
 
   ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6859889629721212" data-ad-slot="9115116082" data-ad-format="auto"
   javascript:
