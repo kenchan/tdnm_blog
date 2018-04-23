@@ -47,3 +47,19 @@ main article:first-child {
   color: #545454;
   line-height: 1.7em;
 }
+
+.article__footer__share_buttons {
+  display: flex;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.article__footer__share_button_item {
+  line-height: 0;
+  vertical-align: top;
+  margin-left: 6px;
+}
+
+.article__footer__share_button_item:first-child {
+  margin-left: 0;
+}
