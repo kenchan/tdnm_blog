@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails', '~> 5.1.6'
+gem 'rails', '~> 5.2.0'
 
 gem 'administrate'
 gem 'coffee-rails'
@@ -23,10 +23,6 @@ gem 'sdoc', '~> 1.0.0', group: :doc
 gem 'sitemap_generator'
 gem 'slim-rails'
 gem 'uglifier'
-
-group :development do
-  gem 'spring'
-end
 
 group :production do
   gem 'rails_12factor'
