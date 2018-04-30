@@ -1,4 +1,4 @@
 tmp
 vendor
 log
-config/secrets.yml.key
+config/master.key

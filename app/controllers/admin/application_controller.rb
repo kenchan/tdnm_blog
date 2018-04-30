@@ -6,10 +6,10 @@
 # you're free to overwrite the RESTful controller actions.
 module Admin
   class ApplicationController < Administrate::ApplicationController
-    if Rails.application.secrets.admin_username
+    if Rails.env.production?
       http_basic_authenticate_with(
-        name: Rails.application.secrets.admin_username,
-        password: Rails.application.secrets.admin_password
+        name: Rails.application.credentials.admin_username,
+        password: Rails.application.credentials.admin_password
       )
     end
 
