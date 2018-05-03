@@ -29,6 +29,7 @@ group :production do
 end
 
 group :development, :test do
+  gem 'pry-rails'
   gem 'byebug'
   gem 'listen'
 end
