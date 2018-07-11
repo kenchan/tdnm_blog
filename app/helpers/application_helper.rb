@@ -22,8 +22,13 @@ module ApplicationHelper
       reverse: true,
       description: meta_description,
       og: {
+        title: @article.try(:title),
+        site_name: weblog.title,
         image: @article.try(:eye_catching_image_url).blank? ? weblog.default_eye_catching_image_url : @article.eye_catching_image_url,
         type: @article ? 'article' : 'website'
+      },
+      twitter: {
+        card: "summary"
       }
     }
   end
