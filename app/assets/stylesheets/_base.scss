@@ -23,9 +23,8 @@ body {
   color: $base_font_color;
 }
 
-main {
-  width: 60%;
-  margin: 1rem auto;
+img, embed, object, video {
+  max-width: 100%;
 }
 
 @media screen and (max-device-width: 480px) {
