@@ -26,6 +26,20 @@ main article:first-child {
   border-top: none;
 }
 
+.article__header__eye_catching {
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: 600px;
+    height: 315px;
+  }
+  @media screen and (min-width: 1025px) {
+    width: 800px;
+    height: 420px;
+  }
+}
+
+
 .article__title {
   margin-top: 0;
   padding-top: 0;
