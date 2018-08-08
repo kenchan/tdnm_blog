@@ -27,11 +27,18 @@ img, embed, object, video {
   max-width: 100%;
 }
 
-@media screen and (max-device-width: 480px) {
-  main {
-    width: 90%;
+main {
+  margin: 0px auto;
+  width: 90%;
+
+  @media screen and (min-width: 768px) {
+    width: 600px;
+  }
+  @media screen and (min-width: 1025px) {
+    width: 800px;
   }
 }
+
 
 a {
   overflow-wrap: break-word;
@@ -57,9 +64,13 @@ a {
 
 .site_header__title {
   margin: 0 auto 0;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-decoration: none;
   color: #1a455a;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.5rem;
+  }
 }
 
 footer {
