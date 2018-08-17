@@ -15,30 +15,21 @@ services:
   app:
     build:
       context: .
+      dockerfile: Dockerfile-dev
     links:
       - db
     environment:
-      - "DATABASE_URL=postgres://postgres:postgresql_password@db:5432/tdnm"
-      - "RAILS_ENV=production"
+      - "DATABASE_URL=postgresql://postgres:postgresql_password@db:5432/tdnm"
       - "TRACKING_ID=UA-00000000-0"
-      - "DEFAULT_URL=https://your-host.example.com"
-      - "RAILS_MASTER_KEY=MY_MASTER_KEY"
+      - "DEFAULT_URL=https://diary.shu-cream.localhost"
     depends_on:
       - db
-  cron:
-    build:
-      context: .
-    command: crond -f -d 8
-    links:
-      - db
-    environment:
-      - "DATABASE_URL=postgres://postgres:postgresql_password@db:5432/tdnm"
-      - "RAILS_ENV=production"
-      - "TRACKING_ID=UA-00000000-0"
-      - "DEFAULT_URL=https://your-host.example.com"
-      - "RAILS_MASTER_KEY=MY_MASTER_KEY"
-    depends_on:
-      - db
+    volumes:
+      - .:/app
+    volumes_from:
+      - data
+    command: ["bin/rails", "server", "-b", "0.0.0.0"]
+
   db:
     image: "postgres"
     volumes_from:
@@ -50,4 +41,6 @@ services:
   data:
     image: "busybox"
     volumes:
-      - "/var/lib/postgresql/data"
+      - /var/lib/postgresql/data
+      - /app/.bundle
+      - /app/vendor/bundle
