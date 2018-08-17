@@ -48,6 +48,7 @@ services:
     environment:
       - "POSTGRES_USER=postgres"
       - "POSTGRES_PASSWORD=postgresql_password"
+      - "POSTGRES_DB=tdnm"
   data:
     image: "busybox"
     volumes:
