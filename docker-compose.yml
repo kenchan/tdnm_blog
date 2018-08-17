@@ -10,10 +10,8 @@ services:
       - app
     restart: always
     environment:
-      DOMAINS: 'local.shu-cream.net -> http://app:3000'
-      #STAGE: 'production'
+      DOMAINS: 'diary.shu-cream.localhost -> http://app:3000'
       STAGE: 'local'
-      # FORCE_RENEW: 'true'
   app:
     build:
       context: .
