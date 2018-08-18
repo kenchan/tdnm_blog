@@ -10,7 +10,7 @@ services:
       - app
     restart: always
     environment:
-      DOMAINS: 'diary.shu-cream.localhost -> http://app:3000'
+      DOMAINS: 'tdnm.localhost -> http://app:3000'
       STAGE: 'local'
   app:
     build:
@@ -21,7 +21,7 @@ services:
     environment:
       - "DATABASE_URL=postgresql://postgres:postgresql_password@db:5432/tdnm"
       - "TRACKING_ID=UA-00000000-0"
-      - "DEFAULT_URL=https://diary.shu-cream.localhost"
+      - "DEFAULT_URL=https://tdnm.localhost"
     depends_on:
       - db
     volumes:
