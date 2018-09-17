@@ -42,7 +42,7 @@ GEM
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    administrate (0.10.0)
+    administrate (0.11.0)
       actionpack (>= 4.2, < 6.0)
       actionview (>= 4.2, < 6.0)
       activerecord (>= 4.2, < 6.0)
@@ -54,7 +54,7 @@ GEM
       sass-rails (~> 5.0)
       selectize-rails (~> 0.6)
     arel (9.0.0)
-    autoprefixer-rails (9.0.2)
+    autoprefixer-rails (9.1.4)
       execjs
     builder (3.2.3)
     byebug (10.0.2)
