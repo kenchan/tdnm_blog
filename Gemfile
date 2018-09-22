@@ -26,6 +26,7 @@ gem 'uglifier'
 
 group :production do
   gem 'rails_12factor'
+  gem 'sqreen'
 end
 
 group :development, :test do
