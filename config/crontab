@@ -1,1 +1,0 @@
-5 3 * * * cd /srv/app; bin/rails sitemap:refresh;

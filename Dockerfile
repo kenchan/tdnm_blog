@@ -11,7 +11,6 @@ RUN apk --no-cache --virtual=.rails_deps add git g++ make cmake \
   && apk del .rails_deps
 
 COPY ./ .
-COPY ./config/crontab /var/spool/cron/crontabs/root
 RUN bundle exec rake assets:precompile
 
 EXPOSE 3000
