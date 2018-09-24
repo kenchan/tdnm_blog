@@ -18,10 +18,8 @@ services:
       dockerfile: Dockerfile-dev
     links:
       - db
-    environment:
-      - "DATABASE_URL=postgresql://postgres:postgresql_password@db:5432/tdnm"
-      - "TRACKING_ID=UA-00000000-0"
-      - "DEFAULT_URL=https://tdnm.localhost"
+    env_file:
+      - tdnm.env
     depends_on:
       - db
     volumes:
@@ -34,10 +32,8 @@ services:
     image: "postgres"
     volumes_from:
       - data
-    environment:
-      - "POSTGRES_USER=postgres"
-      - "POSTGRES_PASSWORD=postgresql_password"
-      - "POSTGRES_DB=tdnm"
+    env_file:
+      - tdnm.env
   data:
     image: "busybox"
     volumes:
