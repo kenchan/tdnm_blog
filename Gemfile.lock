@@ -78,7 +78,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    commonmarker (0.17.13)
+    commonmarker (0.18.1)
       ruby-enum (~> 0.5)
     concurrent-ruby (1.0.5)
     crass (1.0.4)
@@ -103,7 +103,7 @@ GEM
     http-hpack (0.1.1)
     http-protocol (0.6.2)
       http-hpack (~> 0.1.0)
-    i18n (1.1.0)
+    i18n (1.1.1)
       concurrent-ruby (~> 1.0)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
