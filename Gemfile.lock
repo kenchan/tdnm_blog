@@ -232,7 +232,7 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sq_mini_racer (0.2.3.sqreen4)
-    sqreen (1.15.0)
+    sqreen (1.15.2)
       sq_mini_racer (~> 0.2.2.sqreen1)
     temple (0.8.0)
     thor (0.20.0)
