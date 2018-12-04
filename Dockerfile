@@ -1,4 +1,4 @@
-FROM ruby:2.6.0-preview2-alpine3.7
+FROM ruby:2.6.0-preview3-alpine3.7
 
 RUN apk --no-cache add tzdata nodejs postgresql-dev icu-dev
 RUN cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
