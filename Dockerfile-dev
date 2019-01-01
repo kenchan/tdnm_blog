@@ -1,4 +1,4 @@
-FROM ruby:2.6.0-preview3-alpine3.7
+FROM ruby:2.6.0-alpine3.7
 
 RUN apk --no-cache add tzdata nodejs postgresql postgresql-dev icu-dev g++ make cmake
 
