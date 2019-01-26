@@ -1,8 +1,7 @@
-FROM ruby:2.6.0-alpine3.7
+FROM rubylang/ruby:2.6.0-bionic
 
-RUN apk --no-cache add tzdata nodejs postgresql postgresql-dev icu-dev g++ make cmake
-
-RUN cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
+RUN apt-get update && apt-get install -y --no-install-recommends libpq-dev g++ postgresql-client curl gnupg && apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && apt-get update && apt-get install -y nodejs && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
