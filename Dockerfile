@@ -1,14 +1,13 @@
-FROM ruby:2.6.0-alpine3.7
+FROM rubylang/ruby:2.6.0-bionic
 
-RUN apk --no-cache add tzdata nodejs postgresql-dev icu-dev
-RUN cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
+RUN apt-get update && apt-get install -y --no-install-recommends libpq-dev g++ postgresql-client curl gnupg && apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && apt-get update && apt-get install -y nodejs && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /srv/app
+WORKDIR /app
+
 COPY Gemfile* ./
 
-RUN apk --no-cache --virtual=.rails_deps add git g++ make cmake \
-  && bundle install --deployment \
-  && apk del .rails_deps
+RUN bundle install --deployment
 
 COPY ./ .
 RUN bundle exec rake assets:precompile
