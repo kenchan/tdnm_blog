@@ -8,7 +8,7 @@ article.article
     time.article__published_on= @article.published_on.strftime('%Y-%m-%d (%a)')
     h1.article__title= @article.title
 
-  .article__body== AmpRenderer.new.render(CommonMarker.render_doc(@article.body))
+  .article__body== AmpRenderer.new.render(CommonMarker.render_doc(@article.body), :UNSAFE)
 
   amp-social-share width=50 height=40 type="twitter"
   amp-social-share width=50 height=40 type="facebook" data-param-app_id="198530744084530"

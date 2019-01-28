@@ -7,7 +7,7 @@ article.article
       = @article.title
       = link_to '', article_url(@article)
 
-  .article__body== CommonMarker.render_html(@article.body)
+  .article__body== CommonMarker.render_html(@article.body, :UNSAFE)
 
   .article__footer
     .article__footer__share_buttons

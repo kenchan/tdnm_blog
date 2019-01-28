@@ -6,6 +6,6 @@
       - if a.eye_catching_image_url?
         = image_tag a.eye_catching_image_url, class: "article__header__eye_catching"
 
-    .article__body== CommonMarker.render_html(a.body)
+    .article__body== CommonMarker.render_html(a.body, :UNSAFE)
 
 = paginate @articles
