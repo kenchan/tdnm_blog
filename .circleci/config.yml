@@ -42,3 +42,31 @@ jobs:
       - run:
           name: Run tests
           command: bundle exec rake test
+
+  publish_docker_image:
+    working_directory: ~/tdnm
+
+    machine:
+      docker_layer_caching: true
+
+    steps:
+      - checkout
+      - run:
+          command: docker build -t kenchan/tdnm:latest .
+      - run:
+          command: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+      - run:
+          command: docker push kenchan/tdnm:latest
+
+workflows:
+  version: 2
+  build_and_publish:
+    jobs:
+      - build
+      - publish_docker_image:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - master
