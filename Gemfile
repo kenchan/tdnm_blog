@@ -35,3 +35,5 @@ group :development, :test do
   gem 'byebug'
   gem 'listen'
 end
+
+gem 'graphiql-rails', group: :development
