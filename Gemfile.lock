@@ -100,6 +100,7 @@ GEM
       railties (>= 3.2, < 6.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    graphql (1.9.1)
     http-hpack (0.1.1)
     http-protocol (0.15.0)
       http-hpack (~> 0.1.0)
@@ -257,6 +258,7 @@ DEPENDENCIES
   commonmarker
   falcon
   font-awesome-rails
+  graphql
   jbuilder
   jquery-rails
   kaminari
