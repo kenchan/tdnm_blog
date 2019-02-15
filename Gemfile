@@ -30,10 +30,13 @@ group :production do
   gem 'sqreen'
 end
 
+group :development do
+  gem 'graphiql-rails'
+end
+
 group :development, :test do
   gem 'pry-rails'
   gem 'byebug'
   gem 'listen'
 end
 
-gem 'graphiql-rails', group: :development
