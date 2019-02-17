@@ -8,8 +8,16 @@ module Types
       argument :id, ID, required: true
     end
 
+    field :articles, [Types::ArticleType], null: false do
+      description 'List articles'
+    end
+
     def article(id:)
       Article.find(id)
+    end
+
+    def articles
+      Article.limit(10)
     end
   end
 end
