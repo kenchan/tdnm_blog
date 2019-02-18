@@ -12,6 +12,7 @@ gem 'coffee-rails'
 gem 'commonmarker'
 gem 'falcon'
 gem 'font-awesome-rails'
+gem 'graphql'
 gem 'jbuilder'
 gem 'jquery-rails'
 gem 'kaminari'
@@ -29,8 +30,13 @@ group :production do
   gem 'sqreen'
 end
 
+group :development do
+  gem 'graphiql-rails'
+end
+
 group :development, :test do
   gem 'pry-rails'
   gem 'byebug'
   gem 'listen'
 end
+
