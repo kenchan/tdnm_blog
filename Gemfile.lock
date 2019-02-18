@@ -69,7 +69,7 @@ GEM
     autoprefixer-rails (9.4.7)
       execjs
     builder (3.2.3)
-    byebug (10.0.2)
+    byebug (11.0.0)
     coderay (1.1.2)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
