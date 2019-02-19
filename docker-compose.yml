@@ -1,4 +1,4 @@
-version: "2"
+version: "3"
 
 services:
   https-portal:
@@ -6,9 +6,9 @@ services:
     ports:
       - '80:80'
       - '443:443'
-    links:
-      - app
     restart: always
+    depends_on:
+      - app
     environment:
       DOMAINS: 'tdnm.localhost -> http://app:3000'
       STAGE: 'local'
@@ -16,27 +16,22 @@ services:
     build:
       context: .
       dockerfile: Dockerfile-dev
-    links:
+    depends_on:
       - db
     env_file:
       - tdnm.env
-    depends_on:
-      - db
     volumes:
       - .:/app
-    volumes_from:
-      - data
-    command: ["bin/rails", "server", "-b", "0.0.0.0"]
+      - bundler_cache:/app/vendor/bundle
+    command: ["bash", "-c", "rm tmp/pids/server.pid 2>/dev/null; bin/rails s -b '0.0.0.0'"]
 
   db:
     image: "postgres"
-    volumes_from:
-      - data
+    volumes:
+      - postgresql_data:/var/lib/postgresql/data
     env_file:
       - tdnm.env
-  data:
-    image: "busybox"
-    volumes:
-      - /var/lib/postgresql/data
-      - /app/.bundle
-      - /app/vendor/bundle
+
+volumes:
+  postgresql_data:
+  bundler_cache:

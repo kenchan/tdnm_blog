@@ -5,5 +5,4 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && apt-get update &&
 
 WORKDIR /app
 
-ENTRYPOINT ["bin/docker-setup"]
 CMD "bin/rails about"
