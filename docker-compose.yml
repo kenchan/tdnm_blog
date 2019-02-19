@@ -16,14 +16,14 @@ services:
     build:
       context: .
       dockerfile: Dockerfile-dev
-    env_file:
-      - tdnm.env
     depends_on:
       - db
+    env_file:
+      - tdnm.env
     volumes:
       - .:/app
       - bundler_cache:/app/vendor/bundle
-    command: ["bin/rails", "server", "-b", "0.0.0.0"]
+    command: ["bash", "-c", "rm tmp/pids/server.pid 2>/dev/null; bin/rails s -b '0.0.0.0'"]
 
   db:
     image: "postgres"

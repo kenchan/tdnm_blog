@@ -10,6 +10,12 @@ def system!(*args)
 end
 
 chdir APP_ROOT do
-  puts "\n== docker-compose up =="
-  system! 'docker-compose up'
+  puts '== Installing dependencies =='
+  system('docker-compose run --rm app bundle install')
+
+  puts "\n== Preparing database =="
+  system! 'docker-compose run --rm app bin/rails db:drop db:setup'
+
+  puts "\n== Removing old logs and tempfiles =="
+  system! 'docker-compose run --rm app bin/rails log:clear tmp:clear'
 end
