@@ -6,8 +6,6 @@ services:
     ports:
       - '80:80'
       - '443:443'
-    links:
-      - app
     restart: always
     environment:
       DOMAINS: 'tdnm.localhost -> http://app:3000'
@@ -16,8 +14,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile-dev
-    links:
-      - db
     env_file:
       - tdnm.env
     depends_on:
