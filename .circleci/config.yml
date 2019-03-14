@@ -4,7 +4,7 @@ jobs:
     working_directory: ~/tdnm
 
     docker:
-      - image: circleci/ruby:2.5-node
+      - image: circleci/ruby:2.6-node
         environment:
           DATABASE_URL: postgres://postgres@127.0.0.1:5432/tdnm_test
           RAILS_ENV: test
