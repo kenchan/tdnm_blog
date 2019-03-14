@@ -1,4 +1,4 @@
-FROM rubylang/ruby:2.6.1-bionic
+FROM rubylang/ruby:2.6.2-bionic
 
 RUN apt-get update && apt-get install -y --no-install-recommends libpq-dev g++ postgresql-client curl gnupg && apt-get clean && rm -rf /var/lib/apt/lists/*
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && apt-get update && apt-get install -y nodejs && apt-get clean && rm -rf /var/lib/apt/lists/*
