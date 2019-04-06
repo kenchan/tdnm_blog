@@ -2,23 +2,7 @@ $base_font_color: #333;
 $base_color_1: #1D7FAF;
 $base_color_2: #62A3C4;
 
-@font-face {
-  font-family: 'Noto Sans CJK JP';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Noto Sans CKJ JP Regular'),
-  url(//fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Regular.woff2) format('woff2'),
-}
-@font-face {
-  font-family: 'Noto Sans CJK JP';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Noto Sans CKJ JP Bold')
-  url(//fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Bold.woff2) format('woff2'),
-}
-
 body {
-  font-family: "Noto Sans", "Noto Sans CJK JP", sans-serif;
   margin: 0;
   color: $base_font_color;
 }
