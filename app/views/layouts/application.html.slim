@@ -14,16 +14,15 @@ html
     - if @article
       link rel="amphtml" href=amp_article_url(@article, only_path: false)
 
-    link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/yakuhanjp@2.0.0/dist/css/yakuhanjp.min.css'
-    link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/default.min.css'
     script async=true src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
     script async=true src='https://b.st-hatena.com/js/bookmark_button.js'
-    script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js'
 
+    link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/default.min.css'
+    script async=true src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js'
     javascript:
-      (function () {
+      document.addEventListener("DOMContentLoaded", function() {
         hljs.initHighlightingOnLoad();
-      }());
+      });
 
     script async=true src="https://www.googletagmanager.com/gtag/js?id=#{ENV['TRACKING_ID']}"
     javascript:
@@ -32,7 +31,7 @@ html
       gtag('js', new Date());
       gtag('config', '#{ENV['TRACKING_ID']}');
 
-    script src="https://s.hatena.ne.jp/js/HatenaStar.js"
+    script async=true src="https://s.hatena.ne.jp/js/HatenaStar.js"
     javascript:
       document.addEventListener("DOMContentLoaded", function() {
         Hatena.Star.Token = "64ec46b14d3213944171cf6c8966b68e2a0a46dd";
