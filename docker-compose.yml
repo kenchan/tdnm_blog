@@ -18,6 +18,8 @@ services:
       dockerfile: Dockerfile-dev
     depends_on:
       - db
+    ports:
+      - '3000:3000'
     env_file:
       - tdnm.env
     volumes:
