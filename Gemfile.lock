@@ -108,7 +108,7 @@ GEM
     graphiql-rails (1.7.0)
       railties
       sprockets-rails
-    graphql (1.9.3)
+    graphql (1.9.4)
     http-hpack (0.1.1)
     http-protocol (0.15.0)
       http-hpack (~> 0.1.0)
