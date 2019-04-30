@@ -81,7 +81,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    commonmarker (0.20.0)
+    commonmarker (0.20.1)
       ruby-enum (~> 0.5)
     concurrent-ruby (1.1.5)
     console (1.2.3)
