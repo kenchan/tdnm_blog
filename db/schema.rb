@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2019_06_04_125626) do
 
-  create_table "articles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "articles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.string "title", null: false
     t.text "body", null: false
     t.string "slug", null: false
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2019_06_04_125626) do
     t.string "eye_catching_image_url", limit: 1024, default: "", null: false
   end
 
-  create_table "weblogs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "weblogs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.string "title", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
