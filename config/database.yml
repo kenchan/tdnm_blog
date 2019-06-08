@@ -8,7 +8,7 @@ default: &default
   adapter: mysql2
   username: root
   password:
-  host: localhost
+  host: <%= ENV['DATABASE_HOST'] %>
   pool: 5
   timeout: 5000
   charset: utf8mb4
