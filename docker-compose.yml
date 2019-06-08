@@ -6,7 +6,6 @@ services:
     ports:
       - '80:80'
       - '443:443'
-    restart: always
     depends_on:
       - app
     environment:
@@ -16,7 +15,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile-dev
-    depends_on:
+    links:
       - db
     ports:
       - '3000:3000'
