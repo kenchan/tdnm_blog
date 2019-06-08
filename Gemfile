@@ -18,7 +18,7 @@ gem 'jquery-rails'
 gem 'kaminari'
 gem 'marked-rails'
 gem 'meta-tags'
-gem 'pg'
+gem 'mysql2'
 gem 'sass-rails'
 gem 'sdoc', '~> 1.0.0', group: :doc
 gem 'sitemap_generator'

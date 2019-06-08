@@ -6,7 +6,6 @@ services:
     ports:
       - '80:80'
       - '443:443'
-    restart: always
     depends_on:
       - app
     environment:
@@ -16,7 +15,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile-dev
-    depends_on:
+    links:
       - db
     ports:
       - '3000:3000'
@@ -28,12 +27,12 @@ services:
     command: ["bash", "-c", "rm tmp/pids/server.pid 2>/dev/null; bin/rails s -b '0.0.0.0'"]
 
   db:
-    image: "postgres"
+    image: "mysql"
     volumes:
-      - postgresql_data:/var/lib/postgresql/data
+      - mysql_data:/var/lib/mysql
     env_file:
       - tdnm.env
 
 volumes:
-  postgresql_data:
+  mysql_data:
   bundler_cache:
