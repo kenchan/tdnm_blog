@@ -92,7 +92,7 @@ GEM
       momentjs-rails (>= 2.8.1)
     erubi (1.8.0)
     execjs (2.7.0)
-    falcon (0.34.0)
+    falcon (0.34.1)
       async (~> 1.13)
       async-container (~> 0.14.0)
       async-http (~> 0.47.0)
