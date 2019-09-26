@@ -1,0 +1,15 @@
+version: 1
+
+update_configs:
+  - package_manager: "ruby:bundler"
+    directory: "/"
+    update_schedule: "daily"
+
+    default_reviewers:
+      - "kenchan"
+
+    allowed_updates:
+      - match:
+          update_type: "all"
+
+    version_requirement_updates: "off"
