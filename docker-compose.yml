@@ -17,8 +17,6 @@ services:
       dockerfile: Dockerfile-dev
     links:
       - db
-    ports:
-      - '3000:3000'
     env_file:
       - tdnm.env
     volumes:
