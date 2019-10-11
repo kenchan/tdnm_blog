@@ -26,3 +26,5 @@
 /config/master.key
 
 tdnm.env
+
+/vendor
