@@ -67,7 +67,7 @@ GEM
       momentjs-rails (~> 2.8)
       sassc-rails (~> 2.1)
       selectize-rails (~> 0.6)
-    async (1.22.1)
+    async (1.22.2)
       console (~> 1.0)
       nio4r (~> 2.3)
       timers (~> 4.1)
