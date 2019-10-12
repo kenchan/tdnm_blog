@@ -10,11 +10,12 @@ end
 
 FileUtils.chdir APP_ROOT do
   puts '== Installing dependencies =='
-  system('docker-compose run --rm app bundle install')
+  system! 'gem install bundler --conservative'
+  system('bundle check') || system!('bundle install')
 
   puts "\n== Preparing database =="
-  system! 'docker-compose run --rm app bin/rails db:prepare'
+  system! 'bin/rails db:prepare'
 
   puts "\n== Removing old logs and tempfiles =="
-  system! 'docker-compose run --rm app bin/rails log:clear tmp:clear'
+  system! 'bin/rails log:clear tmp:clear'
 end

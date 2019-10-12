@@ -5,3 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+ApplicationRecord.transaction do
+
+  weblog = Weblog.create!(title: 'My Weblog')
+
+  Article.create!(
+    title: 'My First Article',
+    published_on: Date.today,
+    slug: '01',
+    body: <<~EOS,
+      # Hello tdnm
+
+      I'm fine!
+    EOS
+  )
+end
