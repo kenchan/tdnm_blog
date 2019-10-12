@@ -2,7 +2,7 @@
   article.article
     header.article__header
       time.article__published_on= a.published_on.strftime('%Y-%m-%d (%a)')
-      h2.article__title= link_to a.title, "#{a.published_on.strftime('%Y/%m/%d')}/#{a.slug}.html"
+      h2.article__title= link_to a.title, article_url(a)
       - if a.eye_catching_image_url?
         = image_tag a.eye_catching_image_url, class: "article__header__eye_catching"
 
