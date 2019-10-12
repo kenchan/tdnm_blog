@@ -2,7 +2,7 @@ article.article
   header.article__header
     - if @article.eye_catching_image_url?
       = image_tag @article.eye_catching_image_url, class: "article__header__eye_catching"
-    time.article__published_on= @article.published_on.strftime('%Y-%m-%d (%a)')
+    = render partial: 'article_published_on', locals: {article: @article}
     h2.article__title
       = @article.title
       = link_to '', article_url(@article)

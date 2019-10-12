@@ -30,4 +30,14 @@ module ArticlesHelper
       }.merge(opts)
     )
   end
+
+  def articles_url(year, month = nil, day = nil)
+    url_for(
+      controller: :articles,
+      action: :list,
+      year: year,
+      month: month ? '%02d' % month : nil,
+      day: day ? '%02d' % day : nil,
+    )
+  end
 end
