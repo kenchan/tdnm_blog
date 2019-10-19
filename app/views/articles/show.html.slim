@@ -11,16 +11,6 @@ article.article
 
   .article__footer
     .article__footer__hatena_star
-    .article__footer__share_buttons
-      .article__footer__share_button_item
-        a href="https://twitter.com/share" class="twitter-share-button" data-via="kenchan"
-          Tweet
-        javascript:
-          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-      .article__footer__share_button_item
-        .fb-like(data-href="#{article_url(@article, only_path: false)}" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false")
-      .article__footer__share_button_item
-        a data-pocket-label="pocket" data-pocket-count="none" class="pocket-btn" data-lang="en"
 
   #disqus_thread
 
@@ -36,17 +26,3 @@ article.article
   ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6859889629721212" data-ad-slot="9115116082" data-ad-format="auto"
   javascript:
     (adsbygoogle = window.adsbygoogle || []).push({});
-
-  div#fb-root
-  javascript:
-    (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.12&appId=198530744084530&autoLogAppEvents=1';
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-
-  javascript:
-    !function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");
-
