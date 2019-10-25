@@ -143,7 +143,7 @@ GEM
       activerecord
       kaminari-core (= 1.1.1)
     kaminari-core (1.1.1)
-    libsqreen (0.3.0.0.1)
+    libsqreen (0.3.0.0.2)
     listen (3.2.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -257,7 +257,7 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sq_mini_racer (0.2.5.0.1.beta2)
-    sqreen (1.18.0)
+    sqreen (1.18.1)
       libsqreen (~> 0.3.0.0)
       sq_mini_racer (~> 0.2.4.sqreen2)
     temple (0.8.2)
