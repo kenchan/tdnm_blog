@@ -114,7 +114,7 @@ GEM
       localhost (~> 1.1)
       rack (>= 1.0)
       samovar (~> 2.1)
-    ffi (1.11.1)
+    ffi (1.11.2)
     font-awesome-rails (4.7.0.5)
       railties (>= 3.2, < 6.1)
     globalid (0.4.2)
