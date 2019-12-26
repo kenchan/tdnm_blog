@@ -1,4 +1,4 @@
-FROM rubylang/ruby:2.6.5-bionic
+FROM rubylang/ruby:2.7.0-bionic
 
 RUN apt-get update && apt-get install -y --no-install-recommends g++ libmysqlclient-dev curl gnupg && apt-get clean && rm -rf /var/lib/apt/lists/*
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && apt-get update && apt-get install -y nodejs && apt-get clean && rm -rf /var/lib/apt/lists/*
