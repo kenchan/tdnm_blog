@@ -19,7 +19,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        sudo apt-get install libmysqlclient-dev
+        sudo apt-get install -q libmysqlclient-dev
 
     - name: Restore caches
       uses: actions/cache@v1
