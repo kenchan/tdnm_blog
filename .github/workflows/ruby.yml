@@ -5,6 +5,11 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8
+        ports:
+          - 3306
     steps:
     - uses: actions/checkout@v1
     - name: Set up Ruby
@@ -14,7 +19,9 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get install libmysqlclient-dev
-    - name: Build and test with Rake
-      run: |
-        gem install bundler
-        bundle install --jobs 4 --retry 3
+    - name: Bundle install
+      run: bundle install --jobs 4 --retry 3
+    - name: Setup database
+      run: bin/rails db:prepare
+    - name: Run tests
+      run: bin/rails test
