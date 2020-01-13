@@ -1,0 +1,45 @@
+name: Ruby
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Set up Ruby
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: 2.6.x
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get install -q libmysqlclient-dev
+
+    - name: Restore caches
+      uses: actions/cache@v1
+      with:
+        path: vendor/bundle
+        key: bundler-${{ hashFiles('Gemfile.lock') }}
+
+    - name: Bundle install
+      run: |
+        gem install bundler
+        bundle install --jobs 4 --retry 3 --path vendor/bundle
+
+    - name: Setup database
+      run: bin/rails db:prepare
+      env:
+        DATABASE_PORT: ${{ job.services.mysql.ports['3306'] }}
+        DATABASE_PASSWORD: root
+
+    - name: Run tests
+      run: bin/rails test
+      env:
+        DATABASE_PORT: ${{ job.services.mysql.ports['3306'] }}
+        DATABASE_PASSWORD: root
