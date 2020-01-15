@@ -103,7 +103,7 @@ GEM
       ruby-enum (~> 0.5)
     concurrent-ruby (1.1.5)
     console (1.7.0)
-    crass (1.0.5)
+    crass (1.0.6)
     datetime_picker_rails (0.0.7)
       momentjs-rails (>= 2.8.1)
     erubi (1.9.0)
