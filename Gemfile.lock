@@ -86,7 +86,7 @@ GEM
       async (~> 1.14)
     async-pool (0.2.0)
       async (~> 1.8)
-    autoprefixer-rails (9.7.3)
+    autoprefixer-rails (9.7.4)
       execjs
     build-environment (1.12.1)
     builder (3.2.4)
