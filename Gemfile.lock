@@ -102,7 +102,7 @@ GEM
     commonmarker (0.21.0)
       ruby-enum (~> 0.5)
     concurrent-ruby (1.1.5)
-    console (1.7.0)
+    console (1.8.0)
     crass (1.0.6)
     datetime_picker_rails (0.0.7)
       momentjs-rails (>= 2.8.1)
