@@ -262,7 +262,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sq_mini_racer (0.2.5.0.1.beta2)
+    sq_mini_racer (0.2.5.0.1.beta3)
     sqreen (1.18.3)
       libsqreen (~> 0.3.0.0)
       sq_mini_racer (~> 0.2.4.sqreen2)
