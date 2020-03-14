@@ -82,9 +82,9 @@ GEM
       protocol-http (~> 0.14.1)
       protocol-http1 (~> 0.10.0)
       protocol-http2 (~> 0.10.0)
-    async-http-cache (0.1.0)
+    async-http-cache (0.1.1)
       async-http
-      protocol-http (~> 0.14.2)
+      protocol-http (~> 0.14.4)
     async-io (1.27.3)
       async (~> 1.14)
     async-pool (0.2.0)
