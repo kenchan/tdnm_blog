@@ -85,7 +85,7 @@ GEM
     async-http-cache (0.1.1)
       async-http
       protocol-http (~> 0.14.4)
-    async-io (1.27.3)
+    async-io (1.27.4)
       async (~> 1.14)
     async-pool (0.2.0)
       async (~> 1.8)
