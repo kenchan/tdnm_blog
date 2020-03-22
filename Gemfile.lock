@@ -67,31 +67,8 @@ GEM
       momentjs-rails (~> 2.8)
       sassc-rails (~> 2.1)
       selectize-rails (~> 0.6)
-    async (1.24.2)
-      console (~> 1.0)
-      nio4r (~> 2.3)
-      timers (~> 4.1)
-    async-container (0.16.3)
-      async (~> 1.0)
-      async-io (~> 1.26)
-      process-group
-    async-http (0.50.6)
-      async (~> 1.23)
-      async-io (~> 1.27.0)
-      async-pool (~> 0.2)
-      protocol-http (~> 0.14.1)
-      protocol-http1 (~> 0.10.0)
-      protocol-http2 (~> 0.11.0)
-    async-http-cache (0.1.2)
-      async-http
-      protocol-http (~> 0.14.4)
-    async-io (1.27.4)
-      async (~> 1.14)
-    async-pool (0.2.0)
-      async (~> 1.8)
     autoprefixer-rails (9.7.4)
       execjs
-    build-environment (1.13.0)
     builder (3.2.4)
     byebug (11.1.1)
     coderay (1.1.2)
@@ -105,23 +82,11 @@ GEM
     commonmarker (0.21.0)
       ruby-enum (~> 0.5)
     concurrent-ruby (1.1.6)
-    console (1.8.2)
     crass (1.0.6)
     datetime_picker_rails (0.0.7)
       momentjs-rails (>= 2.8.1)
     erubi (1.9.0)
     execjs (2.7.0)
-    falcon (0.35.6)
-      async (~> 1.13)
-      async-container (~> 0.16.0)
-      async-http (~> 0.50.4)
-      async-http-cache (~> 0.1.0)
-      async-io (~> 1.22)
-      build-environment (~> 1.13)
-      localhost (~> 1.1)
-      process-metrics (~> 0.1.0)
-      rack (>= 1.0)
-      samovar (~> 2.1)
     ffi (1.12.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -153,13 +118,11 @@ GEM
     listen (3.2.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
-    localhost (1.1.6)
     loofah (2.4.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
-    mapping (1.1.1)
     marcel (0.3.3)
       mimemagic (~> 0.3.2)
     marked-rails (0.3.2.0)
@@ -176,23 +139,13 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
-    process-group (1.2.1)
-      process-terminal (~> 0.2.0)
-    process-metrics (0.1.1)
-    process-terminal (0.2.0)
-      ffi
-    protocol-hpack (1.4.2)
-    protocol-http (0.14.4)
-    protocol-http1 (0.10.2)
-      protocol-http (~> 0.13)
-    protocol-http2 (0.11.4)
-      protocol-hpack (~> 1.4)
-      protocol-http (~> 0.2)
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
     pry-rails (0.3.9)
       pry (>= 0.10.4)
+    puma (4.3.3)
+      nio4r (~> 2.0)
     rack (2.2.2)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -234,9 +187,6 @@ GEM
     rdoc (6.2.1)
     ruby-enum (0.7.2)
       i18n
-    samovar (2.1.4)
-      console (~> 1.0)
-      mapping (~> 1.0)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.2.1)
@@ -274,7 +224,6 @@ GEM
     thor (1.0.1)
     thread_safe (0.3.6)
     tilt (2.0.10)
-    timers (4.3.0)
     tzinfo (1.2.6)
       thread_safe (~> 0.1)
     uglifier (4.2.0)
@@ -292,7 +241,6 @@ DEPENDENCIES
   byebug
   coffee-rails
   commonmarker
-  falcon
   graphiql-rails
   graphql
   jbuilder
@@ -303,6 +251,7 @@ DEPENDENCIES
   meta-tags
   mysql2
   pry-rails
+  puma
   rails (~> 6.0.0)
   rails_12factor
   sass-rails
