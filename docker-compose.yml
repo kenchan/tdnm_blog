@@ -11,26 +11,29 @@ services:
     environment:
       DOMAINS: 'tdnm.localhost -> http://app:3000'
       STAGE: 'local'
+
   app:
     build:
       context: .
-      dockerfile: Dockerfile-dev
+      dockerfile: Dockerfile
     links:
       - db
+    environment:
+      - DATABASE_HOST=db
+      - DATABASE_PASSWORD=root-password
+      - DEFAULT_URL=https://tdnm.localhost
     env_file:
       - tdnm.env
-    volumes:
-      - .:/app
-      - bundler_cache:/app/vendor/bundle
     command: ["bash", "-c", "bin/setup; rm tmp/pids/server.pid 2>/dev/null; bin/rails s -b '0.0.0.0'"]
 
   db:
     image: mysql:5
     volumes:
       - mysql_data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root-password
     env_file:
       - tdnm.env
 
 volumes:
   mysql_data:
-  bundler_cache:
