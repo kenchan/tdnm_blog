@@ -3,10 +3,10 @@ module Admin
     # To customize the behavior of this controller,
     # simply overwrite any of the RESTful actions. For example:
     #
-    def index
-      super
-      @resources = Article.page(params[:page]).order(published_on: :desc)
-    end
+    #def index
+    #  super
+    #  @resources = Article.all.paginate(10, params[:page])
+    #end
 
     # Define a custom finder by overriding the `find_resource` method:
     # def find_resource(param)
@@ -15,5 +15,13 @@ module Admin
 
     # See https://administrate-docs.herokuapp.com/customizing_controller_actions
     # for more information
+
+    # Override Admin::ApplicationController#order
+    def order
+      @order ||= Administrate::Order.new(
+        params.fetch(resource_name, {}).fetch(:order, 'published_on'),
+        params.fetch(resource_name, {}).fetch(:direction, 'desc'),
+      )
+    end
   end
 end
