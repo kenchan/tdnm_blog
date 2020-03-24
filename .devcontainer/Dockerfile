@@ -1,10 +1,11 @@
 FROM rubylang/ruby:2.7.0-bionic
 
 RUN apt-get update -q && apt-get install -y --no-install-recommends -q \
-    g++ \
-    libmysqlclient-dev \
     curl \
+    g++ \
     gnupg \
+    libmysqlclient-dev \
+    mysql-client \
     openssh-client \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
