@@ -13,7 +13,7 @@ class ArticleDashboard < Administrate::BaseDashboard
     body: Field::Text,
     slug: Field::String,
     eye_catching_image_url: Field::String,
-    published_on: Field::DateTime,
+    published_on: Field::DateTime.with_options(format: '%Y-%m-%d'),
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     draft: Field::Boolean,
@@ -29,6 +29,8 @@ class ArticleDashboard < Administrate::BaseDashboard
     :title,
     :body,
     :slug,
+    :published_on,
+    :draft
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES

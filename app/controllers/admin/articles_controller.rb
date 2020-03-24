@@ -3,10 +3,10 @@ module Admin
     # To customize the behavior of this controller,
     # simply overwrite any of the RESTful actions. For example:
     #
-    # def index
-    #   super
-    #   @resources = Article.all.paginate(10, params[:page])
-    # end
+    def index
+      super
+      @resources = Article.page(params[:page]).order(published_on: :desc)
+    end
 
     # Define a custom finder by overriding the `find_resource` method:
     # def find_resource(param)
