@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
   layout 'application'
 
   def index
-    @articles = Article.published.order(published_on: :desc).page(params[:page])
+    @articles = Article.published.order(published_on: :desc).page(params[:page]).per(params[:per_page] || 5)
   end
 
   def list
