@@ -185,7 +185,7 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rdoc (6.2.1)
-    ruby-enum (0.7.2)
+    ruby-enum (0.8.0)
       i18n
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
