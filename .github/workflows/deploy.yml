@@ -22,4 +22,4 @@ jobs:
       run: git remote update
 
     - name: deploy
-      run: git push lolipop master
+      run: git push lolipop HEAD:master
