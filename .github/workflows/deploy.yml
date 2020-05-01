@@ -1,0 +1,28 @@
+name: deploy
+
+on: 
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy_to_lolipop_mc:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - uses: webfactory/ssh-agent@v0.2.0
+      with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+    
+    - name: add known_hosts
+      run: cat .github/workflows/known_hosts >> ~/.ssh/known_hosts
+    
+    - name: git remote add
+      run: git remote add lolipop ${{ secrets.LOLIPOP_REPOSITORY_URL}}
+
+    - name: git remote update
+      run: git remote update
+
+    - name: deploy
+      run: git push lolipop HEAD:master
