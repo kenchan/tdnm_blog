@@ -25,8 +25,10 @@ gem 'slim-rails'
 gem 'uglifier'
 
 group :production do
+  gem 'lograge'
   gem 'rails_12factor'
   gem 'sqreen'
+  gem 'stackdriver'
 end
 
 group :development do
@@ -38,4 +40,3 @@ group :development, :test do
   gem 'byebug'
   gem 'listen'
 end
-
