@@ -48,7 +48,7 @@ Rails.application.configure do
 
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
-  config.log_level = :debug
+  config.log_level = :info
 
   # Prepend all log lines with the following tags.
   config.log_tags = [ :request_id ]
@@ -109,4 +109,13 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
+
+  # lograge
+  config.lograge.enabled = true
+  config.lograge.formatter = Logger::Formatters::Raw.new
+
+  # Stackdriver Shared parameters
+  config.google_cloud.project_id = ENV['GOOGLE_CLOUD_PROJECT_ID']
+  config.google_cloud.keyfile = ENV['GOOGLE_CLOUD_KEYFILE_PATH']
+  config.google_cloud.logging.log_name = 'tdnm_app'
 end
