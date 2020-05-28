@@ -112,7 +112,7 @@ Rails.application.configure do
 
   # lograge
   config.lograge.enabled = true
-  config.lograge.formatter = Logger::Formatters::Raw.new
+  config.lograge.formatter = Lograge::Formatters::Raw.new
 
   # Stackdriver Shared parameters
   config.google_cloud.project_id = ENV['GOOGLE_CLOUD_PROJECT_ID']
