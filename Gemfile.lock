@@ -119,7 +119,7 @@ GEM
       googleapis-common-protos-types (>= 1.0.4, < 2.0)
       stackdriver-core (~> 1.3)
     google-cloud-errors (1.0.1)
-    google-cloud-logging (1.10.6)
+    google-cloud-logging (1.10.7)
       concurrent-ruby (~> 1.1)
       google-cloud-core (~> 1.2)
       google-gax (~> 1.8)
