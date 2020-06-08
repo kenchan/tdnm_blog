@@ -111,7 +111,7 @@ GEM
       stackdriver-core (~> 1.3)
     google-cloud-env (1.3.2)
       faraday (>= 0.17.3, < 2.0)
-    google-cloud-error_reporting (0.35.1)
+    google-cloud-error_reporting (0.35.2)
       concurrent-ruby (~> 1.1)
       google-cloud-core (~> 1.2)
       google-gax (~> 1.8)
