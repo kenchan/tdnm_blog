@@ -157,8 +157,8 @@ GEM
       railties
       sprockets-rails
     graphql (1.11.1)
-    grpc (1.28.0)
-      google-protobuf (~> 3.11)
+    grpc (1.30.0)
+      google-protobuf (~> 3.12)
       googleapis-common-protos-types (~> 1.0)
     i18n (1.8.3)
       concurrent-ruby (~> 1.0)
