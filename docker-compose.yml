@@ -24,7 +24,10 @@ services:
       - DEFAULT_URL=https://tdnm.localhost
     env_file:
       - tdnm.env
-    command: ["bash", "-c", "bin/setup; rm tmp/pids/server.pid 2>/dev/null; bin/rails s -b '0.0.0.0'"]
+    volumes:
+      - .:/app
+      - bundle_cache:/app/vendor/bundle
+    command: ["wait-for-it", "db:3306", "--", "bash", "-c", "bin/setup; rm tmp/pids/server.pid 2>/dev/null; bin/rails s -b '0.0.0.0'"]
 
   db:
     image: mysql:5
@@ -37,3 +40,4 @@ services:
 
 volumes:
   mysql_data:
+  bundle_cache:
