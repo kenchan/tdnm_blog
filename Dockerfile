@@ -1,4 +1,4 @@
-FROM rubylang/ruby:2.7.0-bionic
+FROM rubylang/ruby:2.7.2-bionic
 
 RUN apt-get update -q && apt-get install -y --no-install-recommends -q \
     g++ \
