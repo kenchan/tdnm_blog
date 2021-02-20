@@ -8,11 +8,9 @@ end
 gem 'rails', '~> 6.1.0'
 
 gem 'administrate'
-gem 'coffee-rails'
 gem 'commonmarker'
 gem 'graphql'
 gem 'jbuilder'
-gem 'jquery-rails'
 gem 'kaminari'
 gem 'marked-rails'
 gem 'meta-tags'
