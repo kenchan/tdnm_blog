@@ -39,6 +39,10 @@ html
         };
       });
 
+      document.addEventListener("turbo:load", function() {
+        Prism.highlightAll();
+      });
+
   body
     header.site_header
       = link_to weblog.title, root_path, class: 'site_header__title'
