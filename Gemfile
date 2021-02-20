@@ -23,6 +23,7 @@ gem 'sdoc', '~> 1.0.0', group: :doc
 gem 'sitemap_generator'
 gem 'slim-rails'
 gem 'uglifier'
+gem 'turbo-rails'
 
 group :production do
   gem 'lograge'
