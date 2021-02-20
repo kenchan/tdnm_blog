@@ -8,11 +8,9 @@ end
 gem 'rails', '~> 6.1.0'
 
 gem 'administrate'
-gem 'coffee-rails'
 gem 'commonmarker'
 gem 'graphql'
 gem 'jbuilder'
-gem 'jquery-rails'
 gem 'kaminari'
 gem 'marked-rails'
 gem 'meta-tags'
@@ -23,6 +21,7 @@ gem 'sdoc', '~> 1.0.0', group: :doc
 gem 'sitemap_generator'
 gem 'slim-rails'
 gem 'uglifier'
+gem 'turbo-rails'
 
 group :production do
   gem 'lograge'

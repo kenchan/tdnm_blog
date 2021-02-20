@@ -7,6 +7,7 @@ html
     meta name='viewport' content='width=device-width, initial-scale=1.0'
 
     = stylesheet_link_tag 'application', media: 'all'
+    = turbo_include_tags
 
     link rel='alternate' type='application/atom+xml' title='atom' href='/atom.xml'
     - if @article
@@ -36,6 +37,10 @@ html
             }
           }
         };
+      });
+
+      document.addEventListener("turbo:load", function() {
+        Prism.highlightAll();
       });
 
   body
