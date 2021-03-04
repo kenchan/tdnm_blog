@@ -7,7 +7,7 @@ end
 
 gem 'rails', '~> 6.1.0'
 
-gem 'administrate'
+gem 'administrate', '0.14.0'
 gem 'commonmarker'
 gem 'graphql'
 gem 'jbuilder'
