@@ -39,3 +39,9 @@ jobs:
       env:
         DATABASE_PORT: ${{ job.services.mysql.ports['3306'] }}
         DATABASE_PASSWORD: root-password
+
+    - name: Run system tests
+      run: bin/rails test:system
+      env:
+        DATABASE_PORT: ${{ job.services.mysql.ports['3306'] }}
+        DATABASE_PASSWORD: root-password

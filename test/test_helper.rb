@@ -12,9 +12,13 @@ Capybara.register_driver :selenium_remote_firefox do |app|
   Capybara::Selenium::Driver.new(
     app,
     browser: :remote,
-    url: "http://#{ENV['SELENIUM_HOST']}:4444/wd/hub",
+    url: "http://#{ENV['SELENIUM_HOST'] || 'localhost' }:4444/wd/hub",
     desired_capabilities: Selenium::WebDriver::Remote::Capabilities.firefox
   )
 end
 
-Capybara.server_host = ENV['SELENIUM_APP_HOST']
+Capybara.default_driver = ENV['CI'] ? :selenium_headless : :selenium_remote_firefox
+
+if ENV['SELENIUM_APP_HOST']
+  Capybara.server_host = ENV['SELENIUM_APP_HOST']
+end
