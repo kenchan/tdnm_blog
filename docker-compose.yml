@@ -7,12 +7,12 @@ services:
       - '80:80'
       - '443:443'
     depends_on:
-      - app
+      - webapp
     environment:
-      DOMAINS: 'tdnm.localhost -> http://app:3000'
+      DOMAINS: 'tdnm.localhost -> http://webapp:3000'
       STAGE: 'local'
 
-  app:
+  webapp:
     build:
       context: .
       dockerfile: Dockerfile
@@ -22,6 +22,8 @@ services:
       - DATABASE_HOST=db
       - DATABASE_PASSWORD=root-password
       - DEFAULT_URL=https://tdnm.localhost
+      - SELENIUM_HOST=selenium
+      - SELENIUM_APP_HOST=webapp
     env_file:
       - tdnm.env
     volumes:
@@ -37,6 +39,9 @@ services:
       - MYSQL_ROOT_PASSWORD=root-password
     env_file:
       - tdnm.env
+
+  selenium:
+    image: selenium/standalone-firefox-debug
 
 volumes:
   mysql_data:
