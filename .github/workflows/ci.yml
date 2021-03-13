@@ -17,26 +17,16 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 2.7
-
     - name: Install dependencies
       run: |
         sudo apt-get update
         sudo apt-get install -q libmysqlclient-dev
 
-    - name: Restore caches
-      uses: actions/cache@v1
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1.66.0
       with:
-        path: vendor/bundle
-        key: bundler-${{ hashFiles('Gemfile.lock') }}
-
-    - name: Bundle install
-      run: |
-        gem install bundler
-        bundle install --jobs 4 --retry 3 --path vendor/bundle
+        ruby-version: 2.7
+        bundler-cache: true
 
     - name: Setup database
       run: bin/rails db:prepare
