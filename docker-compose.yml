@@ -22,6 +22,8 @@ services:
       - DATABASE_HOST=db
       - DATABASE_PASSWORD=root-password
       - DEFAULT_URL=https://tdnm.localhost
+      - SELENIUM_HOST=selenium
+      - SELENIUM_APP_HOST=webapp
     env_file:
       - tdnm.env
     volumes:
@@ -37,6 +39,9 @@ services:
       - MYSQL_ROOT_PASSWORD=root-password
     env_file:
       - tdnm.env
+
+  selenium:
+    image: selenium/standalone-firefox-debug
 
 volumes:
   mysql_data:
