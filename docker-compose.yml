@@ -7,12 +7,12 @@ services:
       - '80:80'
       - '443:443'
     depends_on:
-      - app
+      - webapp
     environment:
-      DOMAINS: 'tdnm.localhost -> http://app:3000'
+      DOMAINS: 'tdnm.localhost -> http://webapp:3000'
       STAGE: 'local'
 
-  app:
+  webapp:
     build:
       context: .
       dockerfile: Dockerfile
