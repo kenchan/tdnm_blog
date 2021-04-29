@@ -322,7 +322,7 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sq_mini_racer (0.3.1.0.4)
-    sqreen (1.23.1)
+    sqreen (1.23.2)
       libsqreen (~> 1.0)
       sq_mini_racer (~> 0.2, < 0.4.a)
       sqreen-backport (~> 0.1.0)
