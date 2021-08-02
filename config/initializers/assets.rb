@@ -12,3 +12,8 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
+
+# NOTE: avoid segmentation fault
+# https://github.com/sass/sassc-ruby/issues/207
+# https://github.com/rails/sprockets/issues/640
+Sprockets.export_concurrent = false
