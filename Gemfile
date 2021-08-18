@@ -26,7 +26,6 @@ gem 'turbo-rails'
 group :production do
   gem 'lograge'
   gem 'rails_12factor'
-  gem 'sqreen'
   gem 'stackdriver'
 end
 
