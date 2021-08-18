@@ -32,6 +32,7 @@ end
 
 group :development do
   gem 'graphiql-rails'
+  gem 'solargraph'
 end
 
 group :development, :test do
