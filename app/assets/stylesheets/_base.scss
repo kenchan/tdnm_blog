@@ -1,11 +1,11 @@
-$base_font_color: #333;
-$base_color_1: #1D7FAF;
-$base_color_2: #62A3C4;
-
 :root {
   --mdc-typography-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'BIZ UDPGothic', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Sans Emoji";
   --mdc-typography-body2-line-height: 1.5rem;
-  --mdc-theme-primary: #1D7FAF;
+  --mdc-theme-primary: #003529;
+
+  --base-font-color: #333;
+  --link-text-color: #1D7FAF;
+  --link-text-color__hover: #62A3C4;
 }
 
 .mdc-top-app-bar__title a {
@@ -16,7 +16,7 @@ $base_color_2: #62A3C4;
 }
 
 body {
-  color: $base_font_color;
+  color: var(--base-font-color);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'BIZ UDPGothic', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Sans Emoji";
   margin: 0;
   line-height: 1.5rem;
@@ -33,11 +33,11 @@ footer {
 
 a {
   overflow-wrap: break-word;
-  color: $base_color_1;
+  color: var(--link-text-color);
   text-decoration: none;
   transition: 0.3s;
   &:hover {
-    color: $base_color_2;
+    color: var(--link-text-color__hover);
   }
 }
 

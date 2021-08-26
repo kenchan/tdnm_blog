@@ -1,7 +1,7 @@
 .article-grid-card {
   height: 30rem;
   overflow: hidden;
-  color: $base_font_color;
+  color: var(--base-font-color);
 }
 .mdc-card .card-header, .card-text {
   padding: 0rem 1rem;
