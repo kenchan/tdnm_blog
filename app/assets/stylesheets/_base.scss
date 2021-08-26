@@ -2,26 +2,28 @@ $base_font_color: #333;
 $base_color_1: #1D7FAF;
 $base_color_2: #62A3C4;
 
+:root {
+  --mdc-typography-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'BIZ UDPGothic', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Sans Emoji";
+  --mdc-typography-body2-line-height: 1.5rem;
+  --mdc-theme-primary: #1D7FAF;
+}
+
+.mdc-top-app-bar__title a {
+  color: white;
+  &:hover {
+    color: #CCCCCC;
+  }
+}
+
 body {
-  margin: 0;
   color: $base_font_color;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'BIZ UDPGothic', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Sans Emoji";
+  margin: 0;
+  line-height: 1.5rem;
 }
 
 img, embed, object, video {
   max-width: 100%;
-}
-
-main {
-  margin: 0px auto;
-  width: 90%;
-
-  @media screen and (min-width: 768px) {
-    width: 600px;
-  }
-  @media screen and (min-width: 1025px) {
-    width: 800px;
-  }
 }
 
 footer {
@@ -39,30 +41,7 @@ a {
   }
 }
 
-.site_header {
-  z-index: 100;
-  top: 0;
-  position: sticky;
-  height: 4rem;
-  border-bottom: 1px solid #eee;
-  background: #fcfcfc;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-}
-
-.site_header__title {
-  margin: 0 auto 0;
-  font-size: 1.2rem;
-  text-decoration: none;
-  color: #1a455a;
-
-  @media screen and (min-width: 768px) {
-    font-size: 1.5rem;
-  }
-}
-
 .pagination {
-  font-size: 1.2rem;
-  text-align: center;
+  margin: 1rem;
+  font-size: large;
 }

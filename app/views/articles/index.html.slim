@@ -1,11 +1,15 @@
-- @articles.each do |a|
-  article.article
-    header.article__header
-      time.article__published_on= a.published_on.strftime('%Y-%m-%d (%a)')
-      h2.article__title= link_to a.title, article_url(a)
-      - if a.eye_catching_image_url?
-        = image_tag a.eye_catching_image_url, class: "article__header__eye_catching"
+.mdc-layout-grid
+  .mdc-layout-grid__inner
+    - @articles.each do |a|
+      .mdc-layout-grid__cell--span-4
+        a href="#{article_url(a)}"
+          article.mdc-card.article-grid-card.mdc-ripple-surface.mdc-elevation--z3
+            header.card-header
+              h2= a.title
+            - if a.eye_catching_image_url?
+              .mdc-card__media.mdc-card__media--16-9 style="background-image: url(#{a.eye_catching_image_url});"
 
-    .article__body== CommonMarker.render_html(a.body, :UNSAFE)
-
-= paginate @articles
+            .card-text== sanitize(CommonMarker.render_html(a.body, :UNSAFE), tags: %w(p br))
+  .mdc-layout-grid__inner
+    .mdc-layout-grid__cell--span-12 style="display: flex; justify-content: center;"
+      = paginate @articles

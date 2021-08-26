@@ -1,12 +1,11 @@
-article.article
-  header.article__header
-    - if @article.eye_catching_image_url?
-      = image_tag @article.eye_catching_image_url, class: "article__header__eye_catching"
-    = render partial: 'article_published_on', locals: {article: @article}
-    h2.article__title
-      = @article.title
-      = link_to '', article_url(@article)
+.mdc-layout-grid
+  .mdc-layout-grid__inner
+    .mdc-layout-grid__cell--span-12
+      article.mdc-card
+        header.card-header
+          h2= @article.title
+          = render partial: 'article_published_on', locals: {article: @article}
+        - if @article.eye_catching_image_url?
+          .mdc-card__media.mdc-card__media--16-9 style="background-image: url(#{@article.eye_catching_image_url});"
 
-  .article__body== CommonMarker.render_html(@article.body, :UNSAFE)
-
-  .article__footer
+        .card-text== CommonMarker.render_html(@article.body, :UNSAFE)
