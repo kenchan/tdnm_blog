@@ -45,3 +45,15 @@ a {
   margin: 1rem;
   font-size: large;
 }
+
+.main-article {
+  margin: 0px auto;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: 600px;
+  }
+  @media screen and (min-width: 1025px) {
+    width: 800px;
+  }
+}
