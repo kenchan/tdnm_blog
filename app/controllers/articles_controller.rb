@@ -6,9 +6,14 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    year, month, day = params.values_at(:year, :month, :day).map(&:to_i)
-    slug = params[:slug]
+    if params[:year]
+      year, month, day = params.values_at(:year, :month, :day).map(&:to_i)
+      slug = params[:slug]
 
-    @article = Article.published.where(published_on: Date.new(year, month, day), slug: slug).first!
+      @article = Article.published.where(published_on: Date.new(year, month, day), slug: slug).first!
+      return
+    end
+
+    @article = Article.published.where(title: params[:title]).first!
   end
 end

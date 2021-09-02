@@ -20,4 +20,6 @@ Rails.application.routes.draw do
   namespace :amp do
     get '/:year/:month/:day/:slug', to: 'articles#show', year: /\d{4}/, month: /\d{2}/, day: /\d{2}/
   end
+
+  get '/:title', controller: 'articles', action: 'show'
 end

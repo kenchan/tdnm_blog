@@ -1,5 +1,5 @@
 - content_for :cannonical do
-  = article_url(@article, only_path: false)
+  = url_for(title: @article.title, only_path: false)
 
 article.article
   header.article__header
