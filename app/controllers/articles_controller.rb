@@ -5,12 +5,6 @@ class ArticlesController < ApplicationController
     @articles = Article.published.order(published_on: :desc).page(params[:page]).per(params[:per_page] || 12)
   end
 
-  def list
-    y, m, d = *params.permit(:year, :month, :day).values_at(:year, :month, :day)
-    @articles = Article.published.archives(y, m, d).order(published_on: :desc).page(params[:page])
-    render :index
-  end
-
   def show
     year, month, day = params.values_at(:year, :month, :day).map(&:to_i)
     slug = params[:slug]

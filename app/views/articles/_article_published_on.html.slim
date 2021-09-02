@@ -1,8 +1,0 @@
-time.article__published_on
-  = link_to article.published_on.year, articles_url(article.published_on.year)
-  span -
-  = link_to article.published_on.strftime('%m'), articles_url(article.published_on.year, article.published_on.month)
-  span -
-  = link_to article.published_on.strftime('%d'), articles_url(article.published_on.year, article.published_on.month, article.published_on.day)
-  span &nbsp;
-  = article.published_on.strftime('(%a)')

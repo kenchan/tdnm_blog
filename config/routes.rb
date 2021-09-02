@@ -15,9 +15,6 @@ Rails.application.routes.draw do
 
   get '/atom.xml', controller: 'articles', action: 'index', format: 'atom'
   get '/:year/:month/:day/:slug', to: 'articles#show', year: /\d{4}/, month: /\d{2}/, day: /\d{2}/
-  get '/:year/:month/:day', to: 'articles#list', year: /\d{4}/, month: /\d{2}/, day: /\d{2}/
-  get '/:year/:month', to: 'articles#list', year: /\d{4}/, month: /\d{2}/
-  get '/:year', to: 'articles#list', year: /\d{4}/
   get '/blog/:year/:month/:day/:slug', to: redirect('/%{year}/%{month}/%{day}/%{slug}')
 
   namespace :amp do

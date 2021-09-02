@@ -4,7 +4,6 @@
       article.mdc-card
         header.card-header
           h2= @article.title
-          = render partial: 'article_published_on', locals: {article: @article}
         - if @article.eye_catching_image_url?
           .mdc-card__media.mdc-card__media--16-9 style="background-image: url(#{@article.eye_catching_image_url});"
 
