@@ -2,7 +2,7 @@
   .mdc-layout-grid__inner
     - @articles.each do |a|
       .mdc-layout-grid__cell--span-4
-        a href="#{url_for(action: :show, title: a.title)}"
+        a href="#{article_path(title: a.title)}"
           article.mdc-card.article-grid-card.mdc-ripple-surface.mdc-elevation--z3
             header.card-header
               h2= a.title
