@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_24_153331) do
+ActiveRecord::Schema.define(version: 2021_09_08_153117) do
 
   create_table "articles", charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
     t.string "title", null: false
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2020_03_24_153331) do
     t.boolean "draft", default: false, null: false
     t.string "eye_catching_image_url", limit: 1024, default: "", null: false
     t.index ["published_on"], name: "idx_published_on"
+    t.index ["title"], name: "index_articles_on_title", unique: true
   end
 
   create_table "weblogs", charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
