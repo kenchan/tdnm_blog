@@ -27,4 +27,5 @@
 
 tdnm.env
 
-/vendor
+/vendor/*
+!/vendor/rbs

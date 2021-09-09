@@ -31,7 +31,7 @@ end
 
 group :development do
   gem 'graphiql-rails'
-  gem 'solargraph'
+  gem 'rbs_rails', require: false
 end
 
 group :development, :test do
