@@ -157,7 +157,6 @@ class Article < ApplicationRecord
 
   def self.published: () -> ActiveRecord_Relation
   def self.drafts: () -> ActiveRecord_Relation
-  def self.archives: (untyped year, untyped month, untyped day) -> ActiveRecord_Relation
 
   class ActiveRecord_Relation < ActiveRecord::Relation
     include _ActiveRecord_Relation[Article, Integer]
@@ -165,7 +164,6 @@ class Article < ApplicationRecord
 
     def published: () -> ActiveRecord_Relation
     def drafts: () -> ActiveRecord_Relation
-    def archives: (untyped year, untyped month, untyped day) -> ActiveRecord_Relation
   end
 
   class ActiveRecord_Associations_CollectionProxy < ActiveRecord::Associations::CollectionProxy
