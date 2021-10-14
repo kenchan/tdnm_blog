@@ -22,6 +22,7 @@ gem 'sitemap_generator'
 gem 'slim-rails'
 gem 'uglifier'
 gem 'turbo-rails'
+gem 'avo'
 
 group :production do
   gem 'lograge'
