@@ -11,6 +11,19 @@ Avo.configure do |config|
     # Return a context object that gets evaluated in Avo::ApplicationController
   end
 
+  #config.current_user_method = :current_user
+  config.authenticate_with do
+    user = authenticate_with_http_basic {|name, password|
+      name == Rails.application.credentials.admin_username && password == Rails.application.credentials.admin_password
+    }
+
+    if user
+      @current_user = user
+    else
+      request_http_basic_authentication
+    end
+  end
+
   ## == Authentication ==
   # config.current_user_method = :current_user
   # config.authenticate_with do
