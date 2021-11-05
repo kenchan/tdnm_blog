@@ -195,7 +195,7 @@ GEM
     graphiql-rails (1.8.0)
       railties
       sprockets-rails
-    graphql (1.12.18)
+    graphql (1.12.19)
     grpc (1.41.0)
       google-protobuf (~> 3.17)
       googleapis-common-protos-types (~> 1.0)
