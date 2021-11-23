@@ -351,7 +351,7 @@ GEM
     sdoc (1.0.0)
       rdoc (>= 5.0)
     selectize-rails (0.12.6)
-    selenium-webdriver (4.0.3)
+    selenium-webdriver (4.1.0)
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2)
