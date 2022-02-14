@@ -82,7 +82,7 @@ GEM
       sassc-rails (~> 2.1)
       selectize-rails (~> 0.6)
     ast (2.4.2)
-    avo (1.19.0)
+    avo (1.21.0)
       active_link_to
       addressable
       breadcrumbs_on_rails
@@ -90,7 +90,6 @@ GEM
       hotwire-rails
       httparty
       image_processing
-      manifester
       meta-tags
       pagy
       pundit
@@ -255,9 +254,6 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
-    manifester (0.1.8)
-      rails (>= 6.0)
-      zeitwerk
     marcel (1.0.2)
     marked-rails (0.3.2.0)
     matrix (0.4.2)
@@ -298,7 +294,7 @@ GEM
       mini_portile2 (~> 2.7.0)
       racc (~> 1.4)
     os (1.1.1)
-    pagy (5.9.1)
+    pagy (5.10.1)
       activesupport
     parser (3.0.2.0)
       ast (~> 2.4.1)
@@ -310,7 +306,7 @@ GEM
     public_suffix (4.0.6)
     puma (5.6.2)
       nio4r (~> 2.0)
-    pundit (2.1.1)
+    pundit (2.2.0)
       activesupport (>= 3.0.0)
     racc (1.6.0)
     rack (2.2.3)
@@ -424,7 +420,7 @@ GEM
       concurrent-ruby (~> 1.0)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
-    view_component (2.48.0)
+    view_component (2.49.0)
       activesupport (>= 5.0.0, < 8.0)
       method_source (~> 1.0)
     websocket-driver (0.7.5)
