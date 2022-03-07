@@ -82,11 +82,12 @@ GEM
       sassc-rails (~> 2.1)
       selectize-rails (~> 0.6)
     ast (2.4.2)
-    avo (1.23.0)
+    avo (1.24.2)
       active_link_to
       addressable
       breadcrumbs_on_rails
       countries
+      dry-initializer
       hotwire-rails
       httparty
       image_processing
@@ -120,6 +121,7 @@ GEM
     datetime_picker_rails (0.0.7)
       momentjs-rails (>= 2.8.1)
     digest (3.1.0)
+    dry-initializer (3.1.1)
     erubi (1.10.0)
     execjs (2.8.1)
     faraday (1.8.0)
