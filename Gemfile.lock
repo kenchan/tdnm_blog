@@ -82,11 +82,12 @@ GEM
       sassc-rails (~> 2.1)
       selectize-rails (~> 0.6)
     ast (2.4.2)
-    avo (1.23.0)
+    avo (1.25.0)
       active_link_to
       addressable
       breadcrumbs_on_rails
       countries
+      dry-initializer
       hotwire-rails
       httparty
       image_processing
@@ -120,6 +121,7 @@ GEM
     datetime_picker_rails (0.0.7)
       momentjs-rails (>= 2.8.1)
     digest (3.1.0)
+    dry-initializer (3.1.1)
     erubi (1.10.0)
     execjs (2.8.1)
     faraday (1.8.0)
@@ -249,7 +251,7 @@ GEM
       activesupport (>= 4)
       railties (>= 4)
       request_store (~> 1.0)
-    loofah (2.14.0)
+    loofah (2.15.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -420,7 +422,7 @@ GEM
       concurrent-ruby (~> 1.0)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
-    view_component (2.49.1)
+    view_component (2.50.0)
       activesupport (>= 5.0.0, < 8.0)
       method_source (~> 1.0)
     websocket-driver (0.7.5)
