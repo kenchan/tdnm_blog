@@ -23,6 +23,8 @@ gem 'slim-rails'
 gem 'uglifier'
 gem 'turbo-rails', '~> 1.0.0'
 gem 'avo'
+gem 'omniauth-siwe', github: 'spruceid/omniauth-siwe', branch: 'main'
+gem "omniauth-rails_csrf_protection"
 
 group :production do
   gem 'lograge'
