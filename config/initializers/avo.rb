@@ -1,9 +1,13 @@
+# For more information regaring these settings check out our docs https://docs.avohq.io
 Avo.configure do |config|
   ## == Routing ==
   config.root_path = '/avo'
 
+  # Where should the user be redirected when he hits the `/avo` url
+  # config.home_path = nil
+
   ## == Licensing ==
-  config.license = 'community'
+  config.license = 'community' # change this to 'pro' when you add the license key
   # config.license_key = ENV['AVO_LICENSE_KEY']
 
   ## == Set the context ==
@@ -11,24 +15,19 @@ Avo.configure do |config|
     # Return a context object that gets evaluated in Avo::ApplicationController
   end
 
-  #config.current_user_method = :current_user
-  config.authenticate_with do
+  ## == Authentication ==
+  # config.current_user_method = {}
+  # config.authenticate_with = {}
+  config.current_user_method do
     user = authenticate_with_http_basic {|name, password|
       name == Rails.application.credentials.admin_username && password == Rails.application.credentials.admin_password
     }
-
     if user
       @current_user = user
     else
       request_http_basic_authentication
     end
   end
-
-  ## == Authentication ==
-  # config.current_user_method = :current_user
-  # config.authenticate_with do
-  #   warden.authenticate! scope: :user
-  # end
 
   ## == Authorization ==
   # config.authorization_methods = {
@@ -40,6 +39,7 @@ Avo.configure do |config|
   #   create: 'create?',
   #   destroy: 'destroy?',
   # }
+  # config.raise_error_on_missing_policy = false
 
   ## == Localization ==
   # config.locale = 'en-US'
@@ -52,6 +52,7 @@ Avo.configure do |config|
   # config.per_page_steps = [12, 24, 48, 72]
   # config.via_per_page = 8
   # config.default_view_type = :table
+  # config.hide_layout_when_printing = false
   # config.id_links_to_resource = false
   # config.full_width_container = false
   # config.full_width_index_view = false
@@ -59,14 +60,30 @@ Avo.configure do |config|
   # config.search_debounce = 300
   # config.view_component_path = "app/components"
   # config.display_license_request_timeout_error = true
+  # config.disabled_features = []
 
-
-  # Where should the user be redirected when he hits the `/avo` url
-  # config.home_path = nil
 
   ## == Breadcrumbs ==
   # config.display_breadcrumbs = true
   # config.set_initial_breadcrumbs do
   #   add_breadcrumb "Home", '/avo'
   # end
+
+  ## == Menus ==
+  # config.main_menu = -> {
+  #   section "Dashboards", icon: "dashboards" do
+  #     all_dashboards
+  #   end
+
+  #   section "Resources", icon: "resources" do
+  #     all_resources
+  #   end
+
+  #   section "Tools", icon: "tools" do
+  #     all_tools
+  #   end
+  # }
+  # config.profile_menu = -> {
+  #   link "Profile", path: "/avo/profile", icon: "user-circle"
+  # }
 end
