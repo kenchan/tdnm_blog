@@ -19,13 +19,11 @@ Avo.configure do |config|
   # config.current_user_method = {}
   # config.authenticate_with = {}
   config.current_user_method do
-    user = authenticate_with_http_basic {|name, password|
-      name == Rails.application.credentials.admin_username && password == Rails.application.credentials.admin_password
-    }
-    if user
-      @current_user = user
+    if session[:user_id] == "eip155:1:#{Rails.application.credentials.admin_user_wallet_id}"
+      @current_user = session[:user_id]
     else
-      request_http_basic_authentication
+      flash[:notice] = "Hello '#{session[:user_id]}' !!!"
+      redirect_to '/signin'
     end
   end
 

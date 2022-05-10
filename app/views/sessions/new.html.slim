@@ -1,0 +1,5 @@
+- if flash[:notice]
+  = flash[:notice]
+
+= form_tag '/auth/siwe', method: 'post', data: {turbo: false}
+  = submit_tag 'Sign-in With Ethereum'
