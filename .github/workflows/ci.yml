@@ -2,6 +2,9 @@ name: CI
 
 on: [push]
 
+env:
+  RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
+
 jobs:
   test:
     runs-on: ubuntu-latest
