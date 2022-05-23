@@ -29,14 +29,14 @@ services:
     volumes:
       - .:/app
       - bundle_cache:/app/vendor/bundle
-    command: ["wait-for-it", "db:3306", "--", "bash", "-c", "bin/setup; rm tmp/pids/server.pid 2>/dev/null; bin/rails s -b '0.0.0.0'"]
+    command: ["wait-for-it", "db:5432", "--", "bash", "-c", "bin/setup; rm tmp/pids/server.pid 2>/dev/null; bin/rails s -b '0.0.0.0'"]
 
   db:
-    image: mysql:5
+    image: postgres:14
     volumes:
-      - mysql_data:/var/lib/mysql
+      - pg_data:/var/lib/postgresql/data
     environment:
-      - MYSQL_ROOT_PASSWORD=root-password
+      - POSTGRES_PASSWORD=root-password
     env_file:
       - tdnm.env
 
@@ -44,5 +44,5 @@ services:
     image: selenium/standalone-firefox-debug
 
 volumes:
-  mysql_data:
+  pg_data:
   bundle_cache:
