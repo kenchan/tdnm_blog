@@ -2,6 +2,7 @@ FROM rubylang/ruby:2.7.5-bionic
 
 RUN apt-get update -q && apt-get install -y --no-install-recommends -q \
     g++ \
+    postgresql-client \
     libpq-dev \
     wait-for-it \
     automake \
