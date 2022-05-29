@@ -9,13 +9,13 @@ jobs:
   test:
     runs-on: ubuntu-latest
     services:
-      mysql:
-        image: mysql:8
+      postgres:
+        image: postgres:14
         env:
-          MYSQL_ROOT_PASSWORD: root-password
+          POSTGRES_PASSWORD: root-password
+        options: --health-cmd=pg_isready --health-interval=10s --health-timeout=5s --health-retries=3
         ports:
-          - 3306
-        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+          - 5432:5432
 
     steps:
     - uses: actions/checkout@v2
@@ -34,17 +34,17 @@ jobs:
     - name: Setup database
       run: bin/rails db:prepare
       env:
-        DATABASE_PORT: ${{ job.services.mysql.ports['3306'] }}
+        DATABASE_PORT: 5432
         DATABASE_PASSWORD: root-password
 
     - name: Run tests
       run: bin/rails test
       env:
-        DATABASE_PORT: ${{ job.services.mysql.ports['3306'] }}
+        DATABASE_PORT: 5432
         DATABASE_PASSWORD: root-password
 
     - name: Run system tests
       run: bin/rails test:system
       env:
-        DATABASE_PORT: ${{ job.services.mysql.ports['3306'] }}
+        DATABASE_PORT: 5432
         DATABASE_PASSWORD: root-password
