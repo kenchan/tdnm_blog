@@ -20,7 +20,7 @@ services:
       - db
     environment:
       - DATABASE_HOST=db
-      - DATABASE_PASSWORD=root-password
+      - DATABASE_PASSWORD=postgres
       - DEFAULT_URL=https://tdnm.localhost
       - SELENIUM_HOST=selenium
       - SELENIUM_APP_HOST=webapp
@@ -36,7 +36,7 @@ services:
     volumes:
       - pg_data:/var/lib/postgresql/data
     environment:
-      - POSTGRES_PASSWORD=root-password
+      - POSTGRES_PASSWORD=postgres
     env_file:
       - tdnm.env
 
