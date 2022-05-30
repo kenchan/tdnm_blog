@@ -1,0 +1,32 @@
+FROM rubylang/ruby:2.7.5-bionic
+
+ENV RAILS_ENV production
+ENV RAILS_SERVE_STATIC_FILES true
+ENV RAILS_LOG_TO_STDOUT true
+ENV SECRET_KEY_BASE mfpewamwaofeiwfemwi
+
+WORKDIR /app
+
+RUN apt-get update -q && apt-get install -y --no-install-recommends -q \
+    g++ \
+    postgresql-client \
+    libpq-dev \
+    automake \
+    libtool \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - \
+    && apt-get update -q && apt-get install -y --no-install-recommends -q nodejs \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+RUN bundle config set deploytment true
+
+COPY Gemfile* /app
+RUN bundle install
+
+COPY . /app
+
+RUN bin/rails assets:precompile
+
+EXPOSE 3000
+CMD ["bin/rails", "s", "-b", "0.0.0.0"]
