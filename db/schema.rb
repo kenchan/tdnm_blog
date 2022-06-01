@@ -11,7 +11,10 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2021_09_08_153117) do
-  create_table "articles", charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "articles", force: :cascade do |t|
     t.string "title", null: false
     t.text "body", null: false
     t.string "slug", null: false
@@ -24,7 +27,7 @@ ActiveRecord::Schema[7.0].define(version: 2021_09_08_153117) do
     t.index ["title"], name: "index_articles_on_title", unique: true
   end
 
-  create_table "weblogs", charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
+  create_table "weblogs", force: :cascade do |t|
     t.string "title", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

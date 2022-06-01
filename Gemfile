@@ -13,7 +13,7 @@ gem 'jbuilder'
 gem 'kaminari'
 gem 'marked-rails'
 gem 'meta-tags'
-gem 'mysql2'
+gem 'pg'
 gem 'puma'
 gem 'sass-rails'
 gem 'sdoc', '~> 1.0.0', group: :doc
