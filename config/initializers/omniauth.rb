@@ -9,8 +9,8 @@ Rails.application.config.middleware.use OmniAuth::Builder do
       token_endpoint: '/token',
       userinfo_endpoint: '/userinfo',
       jwks_uri: '/jwk',
-      identifier: Rails.application.credentials[Rails.env.to_sym][:siwe_client_id],
-      secret: Rails.application.credentials[Rails.env.to_sym][:siwe_client_secret]
+      identifier: Rails.application.credentials.dig(Rails.env.to_sym, :siwe_client_id),
+      secret: Rails.application.credentials.dig(Rails.env.to_sym, :siwe_client_secret)
     }
 
     provider :siwe, issuer: issuer, client_options: client_options
