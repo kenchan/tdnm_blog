@@ -1,4 +1,4 @@
-FROM rubylang/ruby:2.7.5-bionic
+FROM rubylang/ruby:3.1
 
 ENV RAILS_ENV production
 ENV RAILS_SERVE_STATIC_FILES true
