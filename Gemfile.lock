@@ -338,7 +338,7 @@ GEM
       activesupport
     parser (3.1.2.0)
       ast (~> 2.4.1)
-    pg (1.4.2)
+    pg (1.4.3)
     pkg-config (1.4.7)
     pry (0.14.1)
       coderay (~> 1.1)
