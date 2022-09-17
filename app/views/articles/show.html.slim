@@ -7,4 +7,11 @@
         - if @article.eye_catching_image_url?
           .mdc-card__media.mdc-card__media--16-9 style="background-image: url(#{@article.eye_catching_image_url});"
 
-        .card-text== CommonMarker.render_html(@article.body, :UNSAFE)
+        .card-text
+          == CommonMarker.render_html(@article.body, :UNSAFE)
+          .right
+            = "created_at: "
+            == @article.created_at
+          .right
+            = "updated_at: "
+            == @article.created_at
