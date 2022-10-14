@@ -349,7 +349,7 @@ GEM
       method_source (~> 1.0)
     pry-rails (0.3.9)
       pry (>= 0.10.4)
-    psych (4.0.4)
+    psych (4.0.6)
       stringio
     public_suffix (5.0.0)
     puma (5.6.5)
@@ -433,7 +433,7 @@ GEM
       tilt
     scrypt (3.0.7)
       ffi-compiler (>= 1.0, < 2.0)
-    sdoc (1.0.0)
+    sdoc (2.4.0)
       rdoc (>= 5.0)
     selenium-webdriver (4.5.0)
       childprocess (>= 0.5, < 5.0)
