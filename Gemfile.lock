@@ -85,7 +85,7 @@ GEM
     aes_key_wrap (1.1.0)
     ast (2.4.2)
     attr_required (1.0.1)
-    avo (2.18.1)
+    avo (2.19.0)
       actionview (>= 6.0)
       active_link_to
       activerecord (>= 6.0)
@@ -99,7 +99,7 @@ GEM
       pagy
       turbo-rails
       view_component
-      zeitwerk
+      zeitwerk (>= 2.6.2)
     bcrypt (3.1.18)
     bindata (2.4.10)
     breadcrumbs_on_rails (4.1.0)
@@ -479,7 +479,7 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.6.5)
+    zeitwerk (2.6.6)
 
 PLATFORMS
   ruby
