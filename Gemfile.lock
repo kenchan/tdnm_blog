@@ -85,7 +85,7 @@ GEM
     aes_key_wrap (1.1.0)
     ast (2.4.2)
     attr_required (1.0.1)
-    avo (2.24.0)
+    avo (2.24.1)
       actionview (>= 6.0)
       active_link_to
       activerecord (>= 6.0)
@@ -359,7 +359,7 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
-    rails-html-sanitizer (1.4.4)
+    rails-html-sanitizer (1.5.0)
       loofah (~> 2.19, >= 2.19.1)
     rails_12factor (0.0.3)
       rails_serve_static_assets
