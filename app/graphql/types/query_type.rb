@@ -8,7 +8,7 @@ module Types
       argument :id, ID, required: true
     end
 
-    field :articles, [Types::ArticleType], null: false do
+    field :articles, Types::ArticleType.connection_type, null: false, max_page_size: 100 do
       description 'List articles'
       argument :published_on, String, required: false
     end
@@ -21,7 +21,7 @@ module Types
       if published_on
         Article.where(published_on: published_on)
       else
-        Article.limit(10)
+        Article.order(published_on: :desc)
       end
     end
   end
