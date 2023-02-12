@@ -1,4 +1,4 @@
-FROM rubylang/ruby:3.1
+FROM rubylang/ruby:3.1-dev-jammy
 
 RUN apt-get update -q && apt-get install -y --no-install-recommends -q \
     g++ \
@@ -7,6 +7,7 @@ RUN apt-get update -q && apt-get install -y --no-install-recommends -q \
     wait-for-it \
     automake \
     libtool \
+    libyaml-dev \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - \
