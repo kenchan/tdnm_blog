@@ -4,8 +4,9 @@ module Types
     # They will be entry points for queries on your schema.
 
     field :article, Types::ArticleType, null: true do
-      description 'Find a article by ID'
-      argument :id, ID, required: true
+      description 'Find a article'
+      argument :id, ID, required: false
+      argument :slug, String, required: false
     end
 
     field :articles, Types::ArticleType.connection_type, null: false, max_page_size: 100 do
@@ -13,8 +14,12 @@ module Types
       argument :published_on, String, required: false
     end
 
-    def article(id:)
-      Article.find(id)
+    def article(id: nil, slug: nil)
+      if id
+        Article.find(id)
+      else
+        Article.where(title: slug).first
+      end
     end
 
     def articles(published_on: nil)
