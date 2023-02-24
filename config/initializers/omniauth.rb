@@ -8,7 +8,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
       authorization_endpoint: '/authorize',
       token_endpoint: '/token',
       userinfo_endpoint: '/userinfo',
-      jwks_uri: '/jwk',
+      jwks_uri: 'https://oidc.login.xyz/jwk',
       identifier: Rails.application.credentials.dig(Rails.env.to_sym, :siwe_client_id),
       secret: Rails.application.credentials.dig(Rails.env.to_sym, :siwe_client_secret)
     }
