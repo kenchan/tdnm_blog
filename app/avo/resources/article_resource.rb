@@ -11,6 +11,6 @@ class ArticleResource < Avo::BaseResource
   field :slug, as: :text
   field :published_on, as: :date
   field :draft, as: :boolean
-  field :eye_catching_image_url, as: :external_image
+  field :featured_image_url, as: :external_image
   # add fields here
 end

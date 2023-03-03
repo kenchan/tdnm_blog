@@ -24,7 +24,7 @@ module ApplicationHelper
       og: {
         title: @article.try(:title),
         site_name: weblog.title,
-        image: @article.try(:eye_catching_image_url).blank? ? weblog.default_eye_catching_image_url : @article.eye_catching_image_url,
+        image: @article.try(:featured_image_url).blank? ? weblog.default_featured_image_url : @article.featured_image_url,
         description: meta_description,
         url: @article ? article_path(title: @article.title, only_path: false) : root_url(only_path: false),
         type: @article ? 'article' : 'website'

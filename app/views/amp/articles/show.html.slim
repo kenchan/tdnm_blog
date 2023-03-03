@@ -3,8 +3,8 @@
 
 article.article
   header.article__header
-    - if @article.eye_catching_image_url?
-      amp-img width=1200 height=630 layout="responsive" src=@article.eye_catching_image_url
+    - if @article.featured_image_url?
+      amp-img width=1200 height=630 layout="responsive" src=@article.featured_image_url
     time.article__published_on= @article.published_on.strftime('%Y-%m-%d (%a)')
     h1.article__title= @article.title
 

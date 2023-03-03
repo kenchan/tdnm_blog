@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2021_09_08_153117) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_03_004038) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -22,7 +22,7 @@ ActiveRecord::Schema[7.0].define(version: 2021_09_08_153117) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "draft", default: false, null: false
-    t.string "eye_catching_image_url", limit: 1024, default: "", null: false
+    t.string "featured_image_url", limit: 1024, default: "", null: false
     t.index ["published_on"], name: "idx_published_on"
     t.index ["title"], name: "index_articles_on_title", unique: true
   end
@@ -31,7 +31,7 @@ ActiveRecord::Schema[7.0].define(version: 2021_09_08_153117) do
     t.string "title", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "default_eye_catching_image_url"
+    t.string "default_featured_image_url"
   end
 
 end

@@ -6,7 +6,7 @@ atom_feed(language: 'ja_JP') do |feed|
     feed.entry(a, url: article_url(title: a.title, only_path: false)) do |entry|
       entry.title(a.title)
       entry.content(
-        (a.eye_catching_image_url.present? ? "<img src='#{a.eye_catching_image_url}'>" : '') +
+        (a.featured_image_url.present? ? "<img src='#{a.featured_image_url}'>" : '') +
         CommonMarker.render_html(a.body, :UNSAFE), type: 'html'
       )
 
