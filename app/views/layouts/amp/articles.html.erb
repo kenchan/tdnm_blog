@@ -105,22 +105,5 @@
     <main>
       <%= yield %>
     </section>
-
-    <amp-analytics type="googleanalytics">
-      <script type="application/json">
-        {
-          "vars": {
-            "account": "<%= ENV['TRACKING_ID'] %>"
-          },
-          "triggers": {
-            "trackPageview": {
-              "on": "visible",
-              "request": "pageview"
-            }
-          }
-        }
-      </script>
-    </amp-analytics>
-
   </body>
 </html>

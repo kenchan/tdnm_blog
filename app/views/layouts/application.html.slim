@@ -17,17 +17,6 @@ html
     script async=true src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-core.min.js'
     script async=true src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js'
 
-    script async=true src="https://www.googletagmanager.com/gtag/js?id=#{ENV['TRACKING_ID']}"
-    javascript:
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments)};
-      gtag('js', new Date());
-      gtag('config', '#{ENV['TRACKING_ID']}');
-
-      document.addEventListener("turbo:load", function() {
-        Prism.highlightAll();
-      });
-
     = stylesheet_link_tag 'application', media: 'all'
     = turbo_include_tags
 
