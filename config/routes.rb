@@ -11,10 +11,6 @@ Rails.application.routes.draw do
   get '/:year/:month/:day/:slug', to: 'articles#show', year: /\d{4}/, month: /\d{2}/, day: /\d{2}/
   get '/blog/:year/:month/:day/:slug', to: redirect('/%{year}/%{month}/%{day}/%{slug}')
 
-  namespace :amp do
-    get '/:year/:month/:day/:slug', to: 'articles#show', year: /\d{4}/, month: /\d{2}/, day: /\d{2}/
-  end
-
   get '/signin', to: 'sessions#new'
   get '/auth/:provider/callback', to: 'sessions#create'
 

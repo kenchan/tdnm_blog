@@ -1,2 +1,0 @@
-module Amp::ArticlesHelper
-end
