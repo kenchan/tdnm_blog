@@ -24,8 +24,7 @@ services:
       - DEFAULT_URL=https://tdnm.localhost
       - SELENIUM_HOST=selenium
       - SELENIUM_APP_HOST=webapp
-    env_file:
-      - tdnm.env
+      - TZ=Asia/Tokyo
     volumes:
       - .:/app
       - bundle_cache:/app/vendor/bundle
@@ -37,8 +36,6 @@ services:
       - pg_data:/var/lib/postgresql/data
     environment:
       - POSTGRES_PASSWORD=postgres
-    env_file:
-      - tdnm.env
 
   selenium:
     image: selenium/standalone-firefox-debug
