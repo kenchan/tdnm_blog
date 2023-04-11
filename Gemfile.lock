@@ -80,12 +80,12 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
-    addressable (2.8.3)
+    addressable (2.8.4)
       public_suffix (>= 2.0.2, < 6.0)
     aes_key_wrap (1.1.0)
     ast (2.4.2)
     attr_required (1.0.1)
-    avo (2.29.1)
+    avo (2.30.0)
       actionview (>= 6.0)
       active_link_to
       activerecord (>= 6.0)
@@ -276,7 +276,7 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.9)
-    nokogiri (1.14.2)
+    nokogiri (1.14.3)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     omniauth (2.1.1)
