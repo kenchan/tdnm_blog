@@ -85,7 +85,7 @@ GEM
     aes_key_wrap (1.1.0)
     ast (2.4.2)
     attr_required (1.0.1)
-    avo (2.39.0)
+    avo (2.43.0)
       actionview (>= 6.0)
       active_link_to
       activerecord (>= 6.0)
@@ -303,7 +303,7 @@ GEM
       webfinger (~> 1.2)
     openssl (3.1.0)
     os (1.1.4)
-    pagy (6.0.4)
+    pagy (6.1.0)
     parser (3.2.2.1)
       ast (~> 2.4.1)
     pg (1.5.4)
@@ -452,7 +452,7 @@ GEM
     validate_url (1.0.15)
       activemodel (>= 3.0.0)
       public_suffix
-    view_component (3.5.0)
+    view_component (3.6.0)
       activesupport (>= 5.2.0, < 8.0)
       concurrent-ruby (~> 1.0)
       method_source (~> 1.0)
