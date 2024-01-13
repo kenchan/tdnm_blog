@@ -6,7 +6,7 @@ module ApplicationHelper
   def meta_description
     @_meta_description ||= if @article
       truncate(
-        strip_tags(CommonMarker.render_html(@article.body)),
+        strip_tags(Commonmarker.render_html(@article.body)),
         length: MetaTags.config.description_limit
       )
     else

@@ -7,7 +7,7 @@ atom_feed(language: 'ja_JP') do |feed|
       entry.title(a.title)
       entry.content(
         (a.featured_image_url.present? ? "<img src='#{a.featured_image_url}'>" : '') +
-        CommonMarker.render_html(a.body, :UNSAFE), type: 'html'
+        Commonmarker.render_html(a.body, :UNSAFE), type: 'html'
       )
 
       entry.author do |author|
