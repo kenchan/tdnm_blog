@@ -8,7 +8,7 @@
           .mdc-card__media.mdc-card__media--16-9 style="background-image: url(#{@article.featured_image_url});"
 
         .card-text
-          == Commonmarker.render_html(@article.body, :UNSAFE)
+          == Commonmarker.to_html(@article.body, options: { render: { unsafe: true} })
           .right
             = "created_at: "
             == @article.created_at
