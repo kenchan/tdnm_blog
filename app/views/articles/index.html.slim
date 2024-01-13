@@ -6,7 +6,7 @@
           article.mdc-card.article-grid-card.mdc-ripple-surface.mdc-elevation--z3
             header.card-header
               h2= a.title
-            - if a.featured_image_url
+            - if a.featured_image_url?
               .mdc-card__media.mdc-card__media--16-9 style="background-image: url(#{a.featured_image_url});"
 
             .card-text== sanitize(Commonmarker.to_html(a.body, options: { render: { unsafe: true} }), tags: %w(p br))
