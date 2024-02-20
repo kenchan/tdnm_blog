@@ -99,6 +99,7 @@ GEM
       turbo-rails
       view_component (>= 2.54.0)
       zeitwerk (>= 2.6.2)
+    base64 (0.2.0)
     bcrypt (3.1.18)
     bindata (2.4.15)
     builder (3.2.4)
@@ -399,7 +400,8 @@ GEM
       ffi-compiler (>= 1.0, < 2.0)
     sdoc (1.0.0)
       rdoc (>= 5.0)
-    selenium-webdriver (4.14.0)
+    selenium-webdriver (4.18.1)
+      base64 (~> 0.2)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
